@@ -1,0 +1,1055 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>51hlw在线-影视资源检索与观看指南</title>
+<meta name="description" content="51hlw在线是一个影视资源检索与观看信息站，整理院线新片、剧集更新、纪录片与经典片单的可用观看渠道、清晰度差异与字幕版本，提供检索方法、片单推荐和常见问题解答，帮助观众按题材、年份、地区快速找到想看的片子。">
+<meta name="keywords" content="51hlw在线">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23123a4d'/%3E%3Ccircle cx='32' cy='32' r='17' fill='none' stroke='%23f0b429' stroke-width='4'/%3E%3Ccircle cx='32' cy='32' r='5' fill='%23f0b429'/%3E%3Cpath d='M32 8v8M32 48v8M8 32h8M48 32h8' stroke='%23f0b429' stroke-width='3'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#15222b;
+  --ink-soft:#3d4f5c;
+  --muted:#6b7c88;
+  --line:#d8e0e5;
+  --line-strong:#b6c3cb;
+  --bg:#f4f7f8;
+  --card:#ffffff;
+  --brand:#123a4d;
+  --brand-2:#1d5a72;
+  --accent:#f0b429;
+  --accent-soft:#fdf3d8;
+  --teal-soft:#e3eef1;
+  --radius:12px;
+  --radius-sm:8px;
+  --shadow:0 1px 2px rgba(21,34,43,.06),0 4px 16px rgba(21,34,43,.06);
+  --shadow-hover:0 2px 4px rgba(21,34,43,.08),0 8px 24px rgba(21,34,43,.10);
+  --fs-h1:clamp(26px,3.4vw,40px);
+  --fs-h2:clamp(20px,2.3vw,26px);
+  --fs-h3:17px;
+  --fs-body:15.5px;
+  --fs-sm:13.5px;
+  --fs-xs:12px;
+  --gap:20px;
+  --wrap:1200px;
+  --stick:96px;
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--stick)}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:var(--font);font-size:var(--fs-body);line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{color:var(--brand-2);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3,h4{margin:0;line-height:1.35;font-weight:700;letter-spacing:.2px}
+p{margin:0 0 12px}
+ul,ol{margin:0 0 12px;padding-left:1.25em}
+li{margin:4px 0}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px}
+.skip{position:absolute;left:-999px;top:0;background:var(--accent);color:#15222b;padding:8px 14px;z-index:200;border-radius:0 0 8px 0}
+.skip:focus{left:0}
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 18px}
+.eyebrow{font-size:var(--fs-xs);letter-spacing:.14em;color:var(--brand-2);font-weight:700;text-transform:uppercase}
+.muted{color:var(--muted)}
+
+/* ---------- 吸顶区 ---------- */
+.sticktop{position:sticky;top:0;z-index:100}
+.notice{
+  background:var(--brand);color:#eaf2f5;font-size:var(--fs-sm);
+  border-bottom:1px solid rgba(255,255,255,.12);
+}
+.notice .wrap{display:flex;gap:14px;align-items:center;min-height:34px;padding-top:6px;padding-bottom:6px;flex-wrap:wrap}
+.notice b{color:var(--accent);font-weight:700}
+.notice a{color:#eaf2f5;text-decoration:underline;text-underline-offset:3px}
+.notice .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none}
+
+.header{background:rgba(255,255,255,.97);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);box-shadow:0 1px 0 rgba(21,34,43,.04)}
+.header .wrap{display:flex;align-items:center;gap:18px;min-height:60px;padding-top:8px;padding-bottom:8px}
+.brand{display:flex;align-items:center;gap:10px;flex:none}
+.brand-mark{width:38px;height:38px;flex:none}
+.brand-text{display:flex;flex-direction:column;line-height:1.15}
+.brand-text strong{font-size:17px;letter-spacing:.5px;color:var(--brand)}
+.brand-text span{font-size:11px;color:var(--muted);letter-spacing:.08em}
+.nav-main{display:flex;gap:2px;flex-wrap:wrap;margin-left:6px}
+.nav-main a{display:block;padding:6px 9px;border-radius:var(--radius-sm);font-size:14px;color:var(--ink-soft);white-space:nowrap}
+.nav-main a:hover{background:var(--teal-soft);text-decoration:none;color:var(--brand)}
+.nav-main a.active{background:var(--brand);color:#fff}
+.header-tools{display:flex;align-items:center;gap:10px;margin-left:auto}
+.search{position:relative;display:flex;align-items:center}
+.search input{
+  width:190px;padding:7px 10px 7px 32px;border:1px solid var(--line-strong);border-radius:999px;
+  font-family:var(--font);font-size:13.5px;background:#fff;color:var(--ink);
+}
+.search input:focus{border-color:var(--brand-2);outline:none;box-shadow:0 0 0 3px rgba(29,90,114,.14)}
+.search svg{position:absolute;left:10px;width:14px;height:14px;color:var(--muted)}
+.search-fb{
+  position:absolute;top:calc(100% + 6px);right:0;width:250px;background:#fff;border:1px solid var(--line);
+  border-radius:var(--radius-sm);box-shadow:var(--shadow-hover);padding:8px;font-size:13px;color:var(--muted);display:none;
+}
+.search-fb.show{display:block}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border-radius:999px;font-size:13.5px;font-weight:600;border:1px solid transparent;cursor:pointer;font-family:var(--font)}
+.btn-primary{background:var(--brand);color:#fff}
+.btn-primary:hover{background:var(--brand-2);text-decoration:none;color:#fff}
+.btn-ghost{background:#fff;color:var(--brand);border-color:var(--line-strong)}
+.btn-ghost:hover{border-color:var(--brand);text-decoration:none}
+.menu-btn{display:none;background:#fff;border:1px solid var(--line-strong);border-radius:var(--radius-sm);padding:6px 10px;font-family:var(--font);font-size:13.5px;cursor:pointer;color:var(--brand)}
+@media (max-width:1060px){
+  .nav-main{display:none;order:5;flex-basis:100%;flex-direction:column;gap:2px;padding:8px 0 10px;margin-left:0;border-top:1px solid var(--line)}
+  .nav-main.open{display:flex}
+  .nav-main a{padding:9px 10px;font-size:15px}
+  .menu-btn{display:inline-flex}
+  .header .wrap{flex-wrap:wrap;padding-top:6px;padding-bottom:6px}
+  .search input{width:150px}
+}
+@media (max-width:520px){
+  .brand-text span{display:none}
+  .search input{width:110px}
+  .header-tools .btn-ghost{display:none}
+}
+
+/* ---------- 首屏 ---------- */
+.hero{
+  position:relative;overflow:hidden;background:
+    radial-gradient(1200px 380px at 88% -40%, rgba(240,180,41,.20), transparent 60%),
+    linear-gradient(180deg,#0e2f3f 0%,#123a4d 55%,#164459 100%);
+  color:#eef4f6;
+}
+.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:34px;padding-top:48px;padding-bottom:48px;align-items:center}
+.hero-copy h1{font-size:var(--fs-h1);color:#fff;letter-spacing:1px;margin-bottom:14px}
+.hero-copy .lead{font-size:16.5px;color:#cfe0e7;max-width:34em;margin-bottom:22px}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px}
+.hero-cta .btn-primary{background:var(--accent);color:#1a2a33}
+.hero-cta .btn-primary:hover{background:#ffc94d;color:#1a2a33}
+.hero-cta .btn-ghost{background:transparent;color:#eef4f6;border-color:rgba(255,255,255,.45)}
+.hero-cta .btn-ghost:hover{border-color:#fff;text-decoration:none}
+.hero-stats{display:flex;gap:26px;flex-wrap:wrap;font-size:13px;color:#a9c4cf}
+.hero-stats b{display:block;font-size:20px;color:var(--accent);line-height:1.2}
+.hero-art{position:relative;height:250px}
+.hero-art svg{width:100%;height:100%}
+@media (max-width:860px){
+  .hero .wrap{grid-template-columns:1fr;padding-top:34px;padding-bottom:34px}
+  .hero-art{height:180px;order:-1;max-width:420px}
+}
+
+/* ---------- 布局 ---------- */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:28px;padding-top:36px;padding-bottom:48px;align-items:start}
+.main-col{min-width:0}
+.side-col{position:sticky;top:var(--stick);display:flex;flex-direction:column;gap:18px}
+section[data-block]{margin-bottom:40px;scroll-margin-top:var(--stick)}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:16px;border-bottom:1px solid var(--line);padding-bottom:10px;flex-wrap:wrap}
+.sec-head h2{font-size:var(--fs-h2);color:var(--brand)}
+.sec-head .hint{font-size:var(--fs-xs);color:var(--muted)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+.pad{padding:18px 20px}
+@media (max-width:900px){
+  .layout{grid-template-columns:1fr}
+  .side-col{position:static;order:99}
+}
+
+/* ---------- 概览 ---------- */
+.overview-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.ov-item{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;box-shadow:var(--shadow)}
+.ov-item h3{font-size:15.5px;color:var(--brand);margin-bottom:6px}
+.ov-item p{margin:0;font-size:14.5px;color:var(--ink-soft)}
+@media (max-width:560px){.overview-grid{grid-template-columns:1fr}}
+
+/* ---------- 精选推荐 ---------- */
+.pick-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.pick{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:transform .16s ease,box-shadow .16s ease;display:flex;flex-direction:column}
+.pick:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover)}
+.pick figure{margin:0;position:relative;aspect-ratio:16/9;overflow:hidden;background:var(--teal-soft)}
+.pick figure img{width:100%;height:100%;object-fit:cover}
+.pick .badge{position:absolute;left:10px;top:10px;background:rgba(18,58,77,.88);color:#fff;font-size:11.5px;padding:2px 9px;border-radius:999px}
+.pick-body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.pick-body h3{font-size:15.5px;color:var(--ink)}
+.pick-body p{font-size:13.8px;color:var(--ink-soft);margin:0}
+.meta{font-size:12px;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;margin-top:auto;padding-top:6px}
+@media (max-width:860px){.pick-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.pick-grid{grid-template-columns:1fr}}
+
+/* ---------- 最新更新（紧凑列表） ---------- */
+.update-list{list-style:none;padding:0;margin:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--card)}
+.update-list li{display:grid;grid-template-columns:78px 1fr auto;gap:12px;padding:12px 16px;border-bottom:1px solid var(--line);font-size:14.5px;align-items:baseline}
+.update-list li:last-child{border-bottom:none}
+.update-list .d{color:var(--brand-2);font-weight:700;font-size:13px}
+.update-list .t a{color:var(--ink);font-weight:600}
+.update-list .s{font-size:12.5px;color:var(--muted);white-space:nowrap}
+@media (max-width:560px){
+  .update-list li{grid-template-columns:64px 1fr;}
+  .update-list .s{grid-column:1/-1;white-space:normal}
+}
+
+/* ---------- 分类入口（标签索引） ---------- */
+.tag-index{display:flex;flex-wrap:wrap;gap:10px}
+.tag-index a{
+  display:inline-flex;align-items:center;gap:7px;background:var(--card);border:1px solid var(--line-strong);
+  border-radius:999px;padding:7px 15px;font-size:14px;color:var(--ink);box-shadow:var(--shadow);
+}
+.tag-index a:hover{border-color:var(--brand);color:var(--brand);text-decoration:none}
+.tag-index .n{font-size:11.5px;color:var(--muted)}
+
+/* ---------- 深度解析（分栏正文） ---------- */
+.analysis{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+.analysis .inner{padding:22px 24px 26px}
+.analysis h2{font-size:var(--fs-h2);color:var(--brand);margin-bottom:8px}
+.analysis .lede{font-size:15px;color:var(--ink-soft);max-width:42em}
+.analysis h3{font-size:var(--fs-h3);color:var(--brand);margin:24px 0 8px;padding-left:10px;border-left:4px solid var(--accent)}
+.analysis p{font-size:15px;color:var(--ink-soft)}
+.verdict{background:var(--accent-soft);border:1px solid #ecd9a4;border-radius:var(--radius-sm);padding:14px 16px;margin:16px 0;font-size:14.8px;color:#5b4a17}
+.verdict strong{color:#3d3208}
+.cmp-table{width:100%;border-collapse:collapse;font-size:13.8px;margin:10px 0 6px}
+.cmp-table th,.cmp-table td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+.cmp-table th{background:var(--teal-soft);color:var(--brand);font-weight:700}
+.cmp-table td{color:var(--ink-soft)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.split .col p:last-child{margin-bottom:0}
+@media (max-width:760px){.split{grid-template-columns:1fr}}
+
+/* ---------- 体验指南（编号步骤） ---------- */
+.steps{counter-reset:st;list-style:none;padding:0;margin:0;display:grid;gap:14px}
+.steps li{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px 16px 62px;box-shadow:var(--shadow)}
+.steps li::before{
+  counter-increment:st;content:counter(st,decimal-leading-zero);
+  position:absolute;left:16px;top:15px;width:32px;height:32px;border-radius:50%;
+  background:var(--brand);color:#fff;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;
+}
+.steps h3{font-size:15.5px;color:var(--brand);margin-bottom:4px}
+.steps p{margin:0;font-size:14.3px;color:var(--ink-soft)}
+
+/* ---------- FAQ ---------- */
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);margin-bottom:10px;box-shadow:var(--shadow)}
+.faq summary{cursor:pointer;padding:14px 18px;font-weight:700;font-size:15px;color:var(--ink);list-style:none;position:relative;padding-right:42px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:20px;color:var(--brand-2);font-weight:400}
+.faq details[open] summary::after{content:"–"}
+.faq .ans{padding:0 18px 16px;font-size:14.6px;color:var(--ink-soft)}
+.faq .ans p:last-child{margin-bottom:0}
+
+/* ---------- 评论 ---------- */
+.comments{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.cmt{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:15px 16px;box-shadow:var(--shadow);font-size:14px;display:flex;flex-direction:column;gap:8px}
+.cmt p{margin:0;color:var(--ink-soft)}
+.cmt .who{font-size:12.5px;color:var(--muted);display:flex;justify-content:space-between;gap:8px;margin-top:auto;padding-top:4px}
+.cmt .who b{color:var(--brand-2);font-weight:600}
+.cmt .rate{color:var(--accent);letter-spacing:1px;font-size:12px}
+@media (max-width:860px){.comments{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.comments{grid-template-columns:1fr}}
+
+/* ---------- 资讯（双栏列表） ---------- */
+.news-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 28px}
+.news-item{padding:12px 0;border-bottom:1px dashed var(--line)}
+.news-item h3{font-size:14.8px;margin-bottom:3px}
+.news-item h3 a{color:var(--ink)}
+.news-item p{font-size:13.4px;color:var(--muted);margin:0}
+.news-item time{font-size:12px;color:var(--brand-2);margin-right:8px}
+@media (max-width:700px){.news-grid{grid-template-columns:1fr}}
+
+/* ---------- 榜单 ---------- */
+.rank{list-style:none;padding:0;margin:0;counter-reset:rk;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.rank li{display:grid;grid-template-columns:44px 1fr auto;gap:12px;align-items:center;padding:12px 16px;border-bottom:1px solid var(--line);font-size:14.5px}
+.rank li:last-child{border-bottom:none}
+.rank li::before{counter-increment:rk;content:counter(rk);font-weight:800;font-size:18px;color:var(--line-strong);text-align:center}
+.rank li:nth-child(-n+3)::before{color:var(--accent)}
+.rank .rk-t{font-weight:600;color:var(--ink)}
+.rank .rk-s{font-size:12.5px;color:var(--muted);white-space:nowrap}
+@media (max-width:520px){.rank li{grid-template-columns:36px 1fr}.rank .rk-s{grid-column:2}}
+
+/* ---------- 对照面板 ---------- */
+.compare-panels{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.panel{border-radius:var(--radius);padding:16px 18px;border:1px solid var(--line);background:var(--card);box-shadow:var(--shadow)}
+.panel h3{font-size:15px;margin-bottom:8px}
+.panel.up h3{color:#1c6b3f}
+.panel.down h3{color:#a3442a}
+.panel ul{margin:0;padding-left:1.15em;font-size:13.8px;color:var(--ink-soft)}
+@media (max-width:640px){.compare-panels{grid-template-columns:1fr}}
+
+/* ---------- 引语卡 ---------- */
+.quote{background:linear-gradient(135deg,#123a4d,#1d5a72);color:#eaf2f5;border-radius:var(--radius);padding:22px 24px;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+.quote::before{content:"“";position:absolute;right:18px;top:-18px;font-size:110px;color:rgba(240,180,41,.22);font-family:Georgia,serif}
+.quote p{margin:0 0 12px;font-size:15.5px;line-height:1.8}
+.quote .src{font-size:12.5px;color:#a9c4cf}
+
+/* ---------- 相关推荐 ---------- */
+.rec-tags{display:flex;flex-wrap:wrap;gap:9px}
+.rec-tags a{background:var(--teal-soft);color:var(--brand);border-radius:var(--radius-sm);padding:6px 13px;font-size:13.5px;border:1px solid #d3e2e7}
+.rec-tags a:hover{background:var(--brand);color:#fff;text-decoration:none;border-color:var(--brand)}
+
+/* ---------- 侧栏 ---------- */
+.side-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 16px 14px;box-shadow:var(--shadow)}
+.side-card h2{font-size:15px;color:var(--brand);margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.side-nav{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:2px}
+.side-nav a{display:block;padding:6px 10px;border-radius:var(--radius-sm);font-size:13.6px;color:var(--ink-soft);border-left:3px solid transparent}
+.side-nav a:hover{background:var(--teal-soft);text-decoration:none}
+.side-nav a.active{background:var(--teal-soft);border-left-color:var(--accent);color:var(--brand);font-weight:700}
+.side-list{list-style:none;padding:0;margin:0;font-size:13.6px}
+.side-list li{padding:7px 0;border-bottom:1px dashed var(--line);display:flex;justify-content:space-between;gap:8px}
+.side-list li:last-child{border-bottom:none}
+.side-list a{color:var(--ink)}
+.side-list .n{color:var(--muted);font-size:12px;white-space:nowrap}
+.side-note{font-size:12.5px;color:var(--muted);margin:0}
+@media (max-width:900px){.side-nav{flex-direction:row;flex-wrap:wrap}.side-nav a{border-left:none;border-bottom:3px solid transparent}.side-nav a.active{border-left:none;border-bottom-color:var(--accent)}}
+
+/* ---------- 页脚 ---------- */
+.footer{background:#0e2a37;color:#c3d5dc;font-size:13.8px;margin-top:10px}
+.footer .wrap{padding-top:34px;padding-bottom:22px}
+.foot-top{display:grid;grid-template-columns:1.2fr 2fr;gap:30px;padding-bottom:22px;border-bottom:1px solid rgba(255,255,255,.12)}
+.foot-brand{display:flex;gap:10px;align-items:flex-start}
+.foot-brand strong{color:#fff;font-size:16px;display:block;letter-spacing:.5px}
+.foot-brand p{margin:6px 0 0;color:#9db7c0;font-size:13px;max-width:22em}
+.foot-cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.foot-cols h3{font-size:13px;color:var(--accent);margin-bottom:8px;letter-spacing:.06em}
+.foot-cols ul{list-style:none;padding:0;margin:0}
+.foot-cols li{margin:5px 0}
+.foot-cols a{color:#c3d5dc;font-size:13px}
+.foot-cols a:hover{color:#fff}
+.foot-bottom{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;padding-top:16px;font-size:12.5px;color:#8fa9b3}
+.foot-bottom a{color:#c3d5dc}
+@media (max-width:760px){.foot-top{grid-template-columns:1fr}.foot-cols{grid-template-columns:1fr 1fr}}
+
+/* ---------- 浮动按钮 ---------- */
+.totop{
+  position:fixed;right:18px;bottom:18px;z-index:90;width:44px;height:44px;border-radius:50%;
+  background:var(--brand);color:#fff;border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;
+  cursor:pointer;box-shadow:var(--shadow-hover);opacity:0;visibility:hidden;transition:opacity .2s,visibility .2s;
+}
+.totop.show{opacity:1;visibility:visible}
+.totop:hover{background:var(--brand-2)}
+@media (max-width:520px){.totop{right:12px;bottom:12px;width:40px;height:40px}}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+  .pick:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要内容</a>
+
+<div class="sticktop">
+  <div class="notice" id="notice">
+    <div class="wrap">
+      <span class="dot" aria-hidden="true"></span>
+      <span><b>51hlw在线</b> · 11月7日更新：《雾港谜案》第一季全集上线，1080P 中字资源已归档；纪录片《潮汐之间》第4集加入片单。</span>
+      <a href="/#updates">查看更新记录</a>
+    </div>
+  </div>
+  <header class="header">
+    <div class="wrap">
+      <a class="brand" href="/#top" aria-label="51hlw在线 首页">
+        <svg class="brand-mark" viewBox="0 0 64 64" role="img" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#123a4d"/>
+          <circle cx="32" cy="32" r="17" fill="none" stroke="#f0b429" stroke-width="4"/>
+          <circle cx="32" cy="32" r="5" fill="#f0b429"/>
+          <path d="M32 8v8M32 48v8M8 32h8M48 32h8" stroke="#f0b429" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-text"><strong>51hlw在线</strong><span>影视资源检索</span></span>
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navMain" aria-label="展开主题导航">菜单</button>
+      <nav class="nav-main" id="navMain" aria-label="主题导航">
+        <a href="/#overview">领域概览</a>
+        <a href="/#picks">精选片单</a>
+        <a href="/#updates">更新动态</a>
+        <a href="/#channels">分类入口</a>
+        <a href="/#analysis">深度解析</a>
+        <a href="/#guide">观看指南</a>
+        <a href="/#faq">常见问题</a>
+      </nav>
+      <div class="header-tools">
+        <div class="search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+          <input type="search" id="siteSearch" placeholder="搜片名 / 演员 / 类型" aria-label="站内查找影视条目">
+          <div class="search-fb" id="searchFb" role="status" aria-live="polite"></div>
+        </div>
+        <a class="btn btn-ghost" href="/#picks">本周片单</a>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main id="main">
+  <!-- 首屏 -->
+  <section class="hero" id="top" aria-labelledby="heroTitle">
+    <div class="wrap">
+      <div class="hero-copy">
+        <p class="eyebrow" style="color:#f0b429">影视资源检索 · 观看渠道整理</p>
+        <h1 id="heroTitle">51hlw在线</h1>
+        <p class="lead">按片名、演员、类型或上映年份查条目，先看清画质、字幕和更新时间，再决定在哪一档观看。院线新片、连载剧集、纪录片和修复老片分开归档，渠道变更单独标注。</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="/#picks">进入本周精选片单</a>
+          <a class="btn btn-ghost" href="/#guide">查看观看步骤</a>
+        </div>
+        <div class="hero-stats">
+          <div><b>3,860</b>已归档条目</div>
+          <div><b>412</b>标注清晰度版本</div>
+          <div><b>11月7日</b>最近一次归档</div>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 420 260" role="img">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#f0b429" stop-opacity=".9"/>
+              <stop offset="1" stop-color="#f0b429" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <rect x="18" y="40" width="250" height="150" rx="12" fill="#0b2531" stroke="#2c6a82"/>
+          <rect x="34" y="56" width="218" height="100" rx="6" fill="#123a4d"/>
+          <circle cx="143" cy="106" r="24" fill="none" stroke="#f0b429" stroke-width="3"/>
+          <path d="M137 96l18 10-18 10z" fill="#f0b429"/>
+          <rect x="34" y="166" width="60" height="6" rx="3" fill="#2c6a82"/>
+          <rect x="104" y="166" width="90" height="6" rx="3" fill="#1d5a72"/>
+          <rect x="288" y="70" width="114" height="120" rx="10" fill="#1d5a72" stroke="#2c6a82"/>
+          <rect x="302" y="86" width="86" height="60" rx="5" fill="#0b2531"/>
+          <path d="M302 166h86" stroke="#f0b429" stroke-width="3" stroke-linecap="round"/>
+          <path d="M302 178h56" stroke="#f0b429" stroke-opacity=".5" stroke-width="3" stroke-linecap="round"/>
+          <path d="M18 210h384" stroke="url(#g1)" stroke-width="2"/>
+          <circle cx="330" cy="34" r="16" fill="none" stroke="#f0b429" stroke-width="2" stroke-dasharray="4 5"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap layout">
+    <div class="main-col">
+
+      <!-- 领域概览 -->
+      <section data-block id="overview" aria-labelledby="ovTitle">
+        <div class="sec-head">
+          <h2 id="ovTitle">领域概览：条目怎么分、信息看哪些</h2>
+          <span class="hint">4 类条目 · 6 项元信息</span>
+        </div>
+        <p>影视条目进入检索体系前，先按内容形态分四类：院线片、连载剧集、纪录长片、修复与经典重映。每类记录的元信息不同——院线片标放映窗口期与数字版上线时间，连载剧集标季数与单集时长，纪录片标集数与拍摄年份，修复片标修复版本与原始放映介质。用户搜“哪能看”之前，通常需要先确认这四项。</p>
+        <div class="overview-grid">
+          <div class="ov-item">
+            <h3>院线片档案</h3>
+            <p>记录公映日期、发行方、数字版窗口期。例如《长夜将尽》10月18日公映，数字版11月4日上线，间隔17天。窗口期缩短直接影响资源出现的时间。</p>
+          </div>
+          <div class="ov-item">
+            <h3>连载剧集索引</h3>
+            <p>按季归档，标每集时长与总集数。《雾港谜案》第一季共8集，单集48分钟，11月7日全集归档，比周更模式提前两天补齐。</p>
+          </div>
+          <div class="ov-item">
+            <h3>纪录片条目</h3>
+            <p>标拍摄年份、集数、语言版本。《潮汐之间》2025年拍摄，4集，普通话原声配中英字幕，第4集11月6日上线。</p>
+          </div>
+          <div class="ov-item">
+            <h3>修复与经典重映</h3>
+            <p>区分2K/4K修复、原始胶片扫描与数字调色版。《城南旧事》4K修复版10月25日上线，与1983年原始上映版画幅比不同，4:3与1.85:1两种都保留。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 精选推荐 -->
+      <section data-block id="picks" aria-labelledby="pickTitle">
+        <div class="sec-head">
+          <h2 id="pickTitle">精选内容推荐：本周五部值得先看的</h2>
+          <span class="hint">按上线时间排序</span>
+        </div>
+        <div class="pick-grid">
+          <article class="pick">
+            <figure>
+              <img src="https://picsum.photos/seed/wugang/640/360" width="640" height="360" loading="lazy" alt="《雾港谜案》雨夜码头剧照，蓝灰色调">
+              <span class="badge">剧集</span>
+            </figure>
+            <div class="pick-body">
+              <h3>雾港谜案 第一季</h3>
+              <p>8集悬疑剧，港口小城连环失踪案。11月7日全集归档，1080P 内嵌中字，单集48分钟。</p>
+              <div class="meta"><span>2026-11-07</span><span>豆瓣标记 3.2 万人</span></div>
+            </div>
+          </article>
+          <article class="pick">
+            <figure>
+              <img src="https://picsum.photos/seed/changye/640/360" width="640" height="360" loading="lazy" alt="《长夜将尽》公路夜景剧照，车灯与远山">
+              <span class="badge">院线片</span>
+            </figure>
+            <div class="pick-body">
+              <h3>长夜将尽</h3>
+              <p>10月18日公映，11月4日数字版上线。公路片，126分钟，1080P 与 4K 两档，字幕为官方简体。</p>
+              <div class="meta"><span>2026-11-04</span><span>票房 2.7 亿</span></div>
+            </div>
+          </article>
+          <article class="pick">
+            <figure>
+              <img src="https://picsum.photos/seed/chaoxi/640/360" width="640" height="360" loading="lazy" alt="《潮汐之间》海岸线航拍，退潮后的滩涂">
+              <span class="badge">纪录片</span>
+            </figure>
+            <div class="pick-body">
+              <h3>潮汐之间</h3>
+              <p>4集自然纪录片，拍的是闽东滩涂养殖与候鸟迁徙。11月6日第4集上线，原声配中英字幕。</p>
+              <div class="meta"><span>2026-11-06</span><span>单集 52 分钟</span></div>
+            </div>
+          </article>
+          <article class="pick">
+            <figure>
+              <img src="https://picsum.photos/seed/chengnan/640/360" width="640" height="360" loading="lazy" alt="《城南旧事》修复版剧照，胡同与旧城墙">
+              <span class="badge">修复</span>
+            </figure>
+            <div class="pick-body">
+              <h3>城南旧事 4K 修复版</h3>
+              <p>10月25日上线，4:3 原始画幅与 1.85:1 调色版并存。修复说明列出 3 处原片划痕处理。</p>
+              <div class="meta"><span>2026-10-25</span><span>1983 年原版</span></div>
+            </div>
+          </article>
+          <article class="pick">
+            <figure>
+              <img src="https://picsum.photos/seed/shanhai/640/360" width="640" height="360" loading="lazy" alt="《山海食事》厨房场景，蒸汽与铁锅特写">
+              <span class="badge">美食</span>
+            </figure>
+            <div class="pick-body">
+              <h3>山海食事</h3>
+              <p>6集地方饮食纪录片，每集一个县域。10月29日完结，标清与 1080P 两档，部分集有方言音轨。</p>
+              <div class="meta"><span>2026-10-29</span><span>6 集完结</span></div>
+            </div>
+          </article>
+          <article class="pick">
+            <figure>
+              <img src="https://picsum.photos/seed/huoche/640/360" width="640" height="360" loading="lazy" alt="《午夜火车》站台剧照，昏黄灯光下的列车">
+              <span class="badge">亚洲片</span>
+            </figure>
+            <div class="pick-body">
+              <h3>午夜火车</h3>
+              <p>日本 2024 年悬疑片，112分钟。11月2日上线，中字由两组字幕组分别压制，时间轴有差别。</p>
+              <div class="meta"><span>2026-11-02</span><span>日本 · 2024</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 最新更新 -->
+      <section data-block id="updates" aria-labelledby="upTitle">
+        <div class="sec-head">
+          <h2 id="upTitle">最新更新：11月1日至11月7日归档记录</h2>
+          <span class="hint">按日期倒序</span>
+        </div>
+        <ul class="update-list">
+          <li><span class="d">11月7日</span><span class="t"><a href="/#picks">《雾港谜案》第一季 8 集全</a>　1080P 内嵌中字，替换此前 720P 先行版</span><span class="s">剧集档案</span></li>
+          <li><span class="d">11月6日</span><span class="t"><a href="/#picks">《潮汐之间》第 4 集</a>　纪录片完结，中英字幕与方言音轨分列</span><span class="s">纪录片档案</span></li>
+          <li><span class="d">11月4日</span><span class="t"><a href="/#picks">《长夜将尽》数字版</a>　1080P 与 4K 双档，官方简体字幕</span><span class="s">院线片档案</span></li>
+          <li><span class="d">11月2日</span><span class="t"><a href="/#analysis">《午夜火车》中字版本对比</a>　两组字幕时间轴差 0.6 秒</span><span class="s">版本说明</span></li>
+          <li><span class="d">10月29日</span><span class="t"><a href="/#channels">《山海食事》第 6 集</a>　全片完结，方言与普通话双音轨</span><span class="s">美食分区</span></li>
+          <li><span class="d">10月25日</span><span class="t"><a href="/#picks">《城南旧事》4K 修复版</a>　原始 4:3 画幅保留，附修复说明 3 条</span><span class="s">修复归档</span></li>
+        </ul>
+      </section>
+
+      <!-- 分类入口 -->
+      <section data-block id="channels" aria-labelledby="chTitle">
+        <div class="sec-head">
+          <h2 id="chTitle">分类入口：按题材与地区找片</h2>
+          <span class="hint">10 个频道</span>
+        </div>
+        <div class="tag-index">
+          <a href="/#picks">悬疑犯罪 <span class="n">486 条</span></a>
+          <a href="/#picks">科幻末世 <span class="n">212 条</span></a>
+          <a href="/#picks">现实主义剧情 <span class="n">531 条</span></a>
+          <a href="/#picks">家庭伦理剧 <span class="n">368 条</span></a>
+          <a href="/#picks">国产动画长片 <span class="n">174 条</span></a>
+          <a href="/#picks">日本电影 <span class="n">402 条</span></a>
+          <a href="/#picks">韩国剧集 <span class="n">289 条</span></a>
+          <a href="/#picks">欧美迷你剧 <span class="n">331 条</span></a>
+          <a href="/#picks"><span>自然纪录片</span> <span class="n">196 条</span></a>
+          <a href="/#picks">经典修复片 <span class="n">243 条</span></a>
+        </div>
+      </section>
+
+      <!-- 深度解析 -->
+      <section data-block id="analysis" aria-labelledby="anTitle">
+        <div class="analysis">
+          <div class="inner">
+            <h2 id="anTitle">深度解析：窗口期缩短之后，资源时间线怎么变</h2>
+            <p class="lede">一个可被反驳的判断：院线片数字版与高清资源之间的时间差，2026 年已从平均 45 天压到 20 天以内，这让“新片上线即出资源”的旧经验失效，按公映日期倒推资源出现时间不再可靠。</p>
+
+            <h3>判断一：窗口期缩短，按公映日期推算已失灵</h3>
+            <p>《长夜将尽》10月18日公映，11月4日数字版上线，间隔17天；同档期另一部喜剧片《周末合租》10月1日公映，数字版10月27日上线，间隔26天。两部片子在同一个发行季度，间隔差了9天。按旧经验“公映后45天左右才有高清”，预测会落空，提前量推算至少偏两周。窗口期由发行方与平台协议决定，不随公映日期线性变化。</p>
+
+            <h3>判断二：版本文件数变多，清晰度不等于可看性</h3>
+            <p>《午夜火车》上线后同时出现两组中字：A 组 11月2日 22:14 发布，文件 1.8GB；B 组 11月3日 09:40 发布，文件 2.3GB。B 组体积大，暗部噪点更少，但时间轴整体延后 0.6 秒，与片头字幕不同步。清晰度更高的版本未必先看完，字幕同步性更影响观看。</p>
+
+            <table class="cmp-table">
+              <caption style="text-align:left;font-size:12.5px;color:#6b7c88;padding:4px 0">《午夜火车》两版中字对照（2026年11月3日核对）</caption>
+              <thead><tr><th>对比项</th><th>A 组</th><th>B 组</th></tr></thead>
+              <tbody>
+                <tr><td>发布时间</td><td>11月2日 22:14</td><td>11月3日 09:40</td></tr>
+                <tr><td>文件体积</td><td>1.8 GB</td><td>2.3 GB</td></tr>
+                <tr><td>时间轴偏差</td><td>0.1 秒</td><td>0.6 秒</td></tr>
+                <tr><td>译名处理</td><td>片名直译</td><td>片名意译，人物名统一</td></tr>
+              </tbody>
+            </table>
+
+            <h3>判断三：修复版画幅之争，原始比例优先</h3>
+            <p>《城南旧事》4K 修复版保留 4:3 原始画幅，同时提供 1.85:1 调色版。修复说明列出 3 处划痕处理：片头 02:14、中段 48:37、片尾 01:39:02。有观众在评论区提出 1.85:1 版裁掉了上下边缘，修复方回应称裁切为可选版本，原始扫描版不裁切。争论的落点是“可选”二字，事实层面两个版本都在，转述层面则出现了“修复版裁画面”的误读。</p>
+
+            <div class="verdict">
+              <strong>可核对中段：</strong>把上述三条拆成核对表——① 公映日期与数字版日期都可在发行方公告中查到；② 两版字幕的文件体积与发布时间来自归档记录；③ 修复说明的 3 处时间码可在片内定位。三条都成立，判断“窗口期经验失效”才站得住；若某部片子的间隔仍超过 40 天，则该判断适用范围收窄。
+            </div>
+
+            <h3>判断四：纪录片条目少，不代表需求低</h3>
+            <p>自然纪录片分区目前 196 条，不到悬疑犯罪分区的四成。但《潮汐之间》11月6日第4集上线后，单集条目页访问在 12 小时内排进当周前五。供给少与需求低是两件事，检索站点按条目数排频道权重，会把纪录片压到后排，实际选择时应按更新频率与完播率看。</p>
+
+            <div class="split">
+              <div class="col">
+                <p><strong>事实：</strong>《雾港谜案》11月7日全集归档，8 集，单集 48 分钟，1080P 内嵌中字；此前 720P 先行版同步下架归档。</p>
+                <p><strong>回应：</strong>针对“为什么先有 720P 后有 1080P”，归档方在更新记录中写的是“先行版用于试看，全集上线后统一 1080P”，未提压片延迟。</p>
+              </div>
+              <div class="col">
+                <p><strong>转述：</strong>有观众称《长夜将尽》4K 版“码率虚标”，来源是一条 11月5日的短评，未给出文件参数。</p>
+                <p><strong>推测：</strong>若按当前窗口期节奏，12 月贺岁档影片的数字版可能集中在 12 月中下旬，届时资源时间线会再次压缩，但这一点尚无发行方公告支撑。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 体验指南 -->
+      <section data-block id="guide" aria-labelledby="gdTitle">
+        <div class="sec-head">
+          <h2 id="gdTitle">体验指南：从检索到观看的五步</h2>
+          <span class="hint">按顺序操作</span>
+        </div>
+        <ol class="steps">
+          <li>
+            <h3>先定条目，再定版本</h3>
+            <p>输入片名后，同一部片可能有院线版、导演剪辑版、修复版三种记录。先看时长差，《长夜将尽》院线版 126 分钟，导演剪辑版 141 分钟，差 15 分钟，选错版本会以为看漏了情节。</p>
+          </li>
+          <li>
+            <h3>核对清晰度与文件体积</h3>
+            <p>1080P 不等于一定清楚。文件 1.2GB 的 1080P 通常是高压缩，暗场容易出块；2GB 以上更接近源片。纪录片《潮汐之间》有 1.1GB 与 2.6GB 两档，滩涂夜景差别明显。</p>
+          </li>
+          <li>
+            <h3>确认字幕类型</h3>
+            <p>内嵌字幕不可关，外挂字幕可换。方言片如《山海食事》部分集有方言音轨，若只想听普通话，需在音轨选项里切换，字幕不随之变化。</p>
+          </li>
+          <li>
+            <h3>看更新日期与完整性</h3>
+            <p>连载剧集要确认是否全集。《雾港谜案》11月7日前只有前 6 集，标“更新至第6集”，全集归档后改为“全8集”。日期和集数两项都核对过，再判断是否值得排队。</p>
+          </li>
+          <li>
+            <h3>记录问题，回填条目</h3>
+            <p>遇到字幕不同步、音画错位，记下时间码。《午夜火车》B 组字幕 0.6 秒偏差，对应片头 00:01:12 处最明显。带着时间码反馈，比只说“字幕不对”更容易被处理。</p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- FAQ -->
+      <section data-block id="faq" aria-labelledby="faqTitle">
+        <div class="sec-head">
+          <h2 id="faqTitle">常见问题：画质、字幕与版本</h2>
+          <span class="hint">6 个高频问题</span>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>院线片的数字版一般在上映后多久出现？</summary>
+            <div class="ans"><p>《长夜将尽》间隔 17 天，《周末合租》间隔 26 天，同季度两部片子差 9 天。发行方与平台的协议决定窗口期，没有统一天数，按公映日期加固定天数推算并不可靠。</p></div>
+          </details>
+          <details>
+            <summary>1080P 和 4K 版本看哪个更合适？</summary>
+            <div class="ans"><p>屏幕小于 55 英寸、观看距离 2 米以上，1080P 与 4K 的肉眼差别有限。《长夜将尽》4K 版文件 8.4GB，1080P 版 2.9GB，前者对播放设备解码能力要求更高，老旧电视播 4K 可能掉帧。</p></div>
+          </details>
+          <details>
+            <summary>同一部片两组中字，怎么判断哪组更准？</summary>
+            <div class="ans"><p>看时间轴偏差与译名统一度。《午夜火车》A 组偏差 0.1 秒、片名直译；B 组偏差 0.6 秒、人物名统一。若只求同步，选 A 组；若在意人名一致，可选 B 组并手动调轴 0.6 秒。</p></div>
+          </details>
+          <details>
+            <summary>修复版为什么会改变画面比例？</summary>
+            <div class="ans"><p>《城南旧事》原始放映画幅为 4:3，4K 修复保留原始扫描版，另提供 1.85:1 调色版供宽屏观看。裁切发生在上下的调色版中，原始版未裁切，两个版本在条目里分开列出。</p></div>
+          </details>
+          <details>
+            <summary>纪录片集数少，更新是不是更慢？</summary>
+            <div class="ans"><p>《潮汐之间》4 集，从 10 月 16 日到 11 月 6 日，平均 7 天更新一集；《山海食事》6 集，10 月 8 日到 10 月 29 日，平均 3.5 天。集数少不代表更新慢，排期由制作方决定。</p></div>
+          </details>
+          <details>
+            <summary>标注“先行版”的条目还能看吗？</summary>
+            <div class="ans"><p>《雾港谜案》720P 先行版在 11 月 7 日全集归档后已下架，条目改为 1080P 内嵌中字。先行版通常画质压缩明显，保留意义不大，归档时统一替换。</p></div>
+          </details>
+        </div>
+      </section>
+
+      <!-- 用户评论 -->
+      <section data-block id="comments" aria-labelledby="cmTitle">
+        <div class="sec-head">
+          <h2 id="cmTitle">用户评论：近期条目下的真实反馈</h2>
+          <span class="hint">5 条留言</span>
+        </div>
+        <div class="comments">
+          <div class="cmt">
+            <p>《雾港谜案》第 6 集码头那场雨戏，1080P 下能看到雨丝，720P 先行版是一团灰。换成全集版值了。</p>
+            <div class="who"><b>南岸观影</b><span class="rate">★★★★☆</span></div>
+          </div>
+          <div class="cmt">
+            <p>《长夜将尽》4K 版码率虚标的说法，我下载后看了文件参数，平均 18Mbps，不像虚标。那条短评没给数据，不太可信。</p>
+            <div class="who"><b>参数党老周</b><span class="rate">★★★☆☆</span></div>
+          </div>
+          <div class="cmt">
+            <p>《午夜火车》B 组字幕确实慢半拍，片头 00:01:12 名字出来字幕还没到。A 组快但人名前后不统一，各有毛病。</p>
+            <div class="who"><b>阿灯</b><span class="rate">★★★☆☆</span></div>
+          </div>
+          <div class="cmt">
+            <p>《城南旧事》非要改 1.85:1 有点多余，4:3 才是原来的样子。不过 4K 扫描的城墙砖缝确实清楚。</p>
+            <div class="who"><b>旧胶片</b><span class="rate">★★★★☆</span></div>
+          </div>
+          <div class="cmt">
+            <p>《潮汐之间》第 4 集候鸟那段镜头稳，中英字幕的位置偏上，遮住了一点滩涂。整体还是好看，就是更新太慢。</p>
+            <div class="who"><b>滩涂散步</b><span class="rate">★★★★☆</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 相关资讯 -->
+      <section data-block id="news" aria-labelledby="nwTitle">
+        <div class="sec-head">
+          <h2 id="nwTitle">相关资讯：发行、排期与修复动态</h2>
+          <span class="hint">6 条</span>
+        </div>
+        <div class="news-grid">
+          <div class="news-item">
+            <h3><time>11月6日</time><a href="/#analysis">《长夜将尽》发行方公布数字版窗口期说明</a></h3>
+            <p>说明列出公映至数字版 17 天的协议依据，未提后续 4K 上线计划。</p>
+          </div>
+          <div class="news-item">
+            <h3><time>11月5日</time><a href="/#picks">《雾港谜案》第二季进入拍摄</a></h3>
+            <p>制作方确认 8 集，预计 2027 年上半年杀青，第一季全集已归档。</p>
+          </div>
+          <div class="news-item">
+            <h3><time>11月4日</time><a href="/#channels">韩剧分区新增 12 部 2026 年作品</a></h3>
+            <p>其中 9 部标有双语字幕，3 部仅原声，条目页已注明音轨。</p>
+          </div>
+          <div class="news-item">
+            <h3><time>11月3日</time><a href="/#analysis">《午夜火车》字幕组发布勘误</a></h3>
+            <p>B 组承认时间轴延后 0.6 秒，11月4日发布修正版，文件名加 r2。</p>
+          </div>
+          <div class="news-item">
+            <h3><time>10月28日</time><a href="/#picks">《城南旧事》修复团队公开扫描参数</a></h3>
+            <p>4K 扫描、16bit 色深，划痕处理 3 处，原始 4:3 版与调色版并行。</p>
+          </div>
+          <div class="news-item">
+            <h3><time>10月26日</time><a href="/#channels">国产动画长片分区年度归档完成</a></h3>
+            <p>174 条记录补齐上映年份与片长，32 条补标了配音版本。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 榜单 -->
+      <section data-block id="ranking" aria-labelledby="rkTitle">
+        <div class="sec-head">
+          <h2 id="rkTitle">本周观看榜：按条目页访问排序</h2>
+          <span class="hint">11月1日—11月7日</span>
+        </div>
+        <ol class="rank">
+          <li><span class="rk-t">雾港谜案 第一季</span><span class="rk-s">11月7日全集归档</span></li>
+          <li><span class="rk-t">长夜将尽</span><span class="rk-s">11月4日数字版</span></li>
+          <li><span class="rk-t">午夜火车</span><span class="rk-s">两组中字并存</span></li>
+          <li><span class="rk-t">潮汐之间</span><span class="rk-s">11月6日完结</span></li>
+          <li><span class="rk-t">城南旧事 4K 修复版</span><span class="rk-s">10月25日上线</span></li>
+        </ol>
+      </section>
+
+      <!-- 对照面板 -->
+      <section data-block id="compare" aria-labelledby="cpTitle">
+        <div class="sec-head">
+          <h2 id="cpTitle">版本对照：该选哪种文件</h2>
+          <span class="hint">两组对照</span>
+        </div>
+        <div class="compare-panels">
+          <div class="panel up">
+            <h3>适合先看的情况</h3>
+            <ul>
+              <li>1080P、2—3GB 文件，解码压力小</li>
+              <li>内嵌中字，无需另找字幕文件</li>
+              <li>片长与原版一致的院线版</li>
+              <li>纪录片原声配中英字幕</li>
+            </ul>
+          </div>
+          <div class="panel down">
+            <h3>需要再斟酌的情况</h3>
+            <ul>
+              <li>4K 文件超 8GB，老旧设备可能卡顿</li>
+              <li>外挂字幕需手动调轴</li>
+              <li>导演剪辑版多 15 分钟，与院线版情节不同</li>
+              <li>调色版裁切画面，非原始比例</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 创作者证言 -->
+      <section data-block id="voices" aria-labelledby="vcTitle">
+        <div class="sec-head">
+          <h2 id="vcTitle">创作者与归档者说</h2>
+          <span class="hint">引语</span>
+        </div>
+        <div class="quote">
+          <p>“片子拍完到观众看到，中间隔着发行、窗口期和压片三件事。观众只看到最后一步，前面两步决定了什么时候有、有什么版本。”</p>
+          <p class="src">——《长夜将尽》后期制片，2026年11月5日映后交流</p>
+        </div>
+        <div class="quote" style="margin-top:14px;background:linear-gradient(135deg,#1d5a72,#2c6a82)">
+          <p>“修复不是把画面变清楚，是先决定哪些痕迹留、哪些修。3 处划痕处理都写进说明，是为了让人能对得上原始拷贝。”</p>
+          <p class="src">——《城南旧事》修复项目扫描负责人，2026年10月28日公开说明</p>
+        </div>
+      </section>
+
+      <!-- 相关推荐 -->
+      <section data-block id="recs" aria-labelledby="rcTitle">
+        <div class="sec-head">
+          <h2 id="rcTitle">相关推荐：按你正在看的片子延伸</h2>
+          <span class="hint">8 个标签</span>
+        </div>
+        <div class="rec-tags">
+          <a href="/#picks">雾港谜案同类型悬疑剧</a>
+          <a href="/#picks">公路片片单</a>
+          <a href="/#picks">滩涂与海岸纪录片</a>
+          <a href="/#picks">4K 修复经典片</a>
+          <a href="/#channels">日本悬疑电影</a>
+          <a href="/#channels">方言音轨纪录片</a>
+          <a href="/#analysis">字幕版本对比</a>
+          <a href="/#guide">数字版窗口期说明</a>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- 侧栏 -->
+    <aside class="side-col" aria-label="辅助导航与榜单">
+      <div class="side-card">
+        <h2>本页导航</h2>
+        <ul class="side-nav" id="sideNav">
+          <li><a href="/#overview">领域概览</a></li>
+          <li><a href="/#picks">精选内容推荐</a></li>
+          <li><a href="/#updates">最新更新</a></li>
+          <li><a href="/#channels">分类入口</a></li>
+          <li><a href="/#analysis">深度解析</a></li>
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#comments">用户评论</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#ranking">本周观看榜</a></li>
+          <li><a href="/#compare">版本对照</a></li>
+          <li><a href="/#voices">创作者说</a></li>
+          <li><a href="/#recs">相关推荐</a></li>
+        </ul>
+      </div>
+      <div class="side-card">
+        <h2>近期归档</h2>
+        <ul class="side-list">
+          <li><a href="/#picks">雾港谜案 第一季</a><span class="n">11-07</span></li>
+          <li><a href="/#picks">潮汐之间 第4集</a><span class="n">11-06</span></li>
+          <li><a href="/#picks">长夜将尽</a><span class="n">11-04</span></li>
+          <li><a href="/#picks">午夜火车</a><span class="n">11-02</span></li>
+          <li><a href="/#picks">山海食事 第6集</a><span class="n">10-29</span></li>
+          <li><a href="/#picks">城南旧事 4K</a><span class="n">10-25</span></li>
+        </ul>
+      </div>
+      <div class="side-card">
+        <h2>核对提示</h2>
+        <p class="side-note">条目内的公映日期、数字版日期来自发行方公告；文件体积与字幕发布时间来自归档记录；修复时间码可在片内定位。没有公告支撑的推测会在深度解析中单列。</p>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer class="footer" id="footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <svg class="brand-mark" viewBox="0 0 64 64" role="img" aria-hidden="true" style="width:34px;height:34px">
+          <rect width="64" height="64" rx="14" fill="#1d5a72"/>
+          <circle cx="32" cy="32" r="17" fill="none" stroke="#f0b429" stroke-width="4"/>
+          <circle cx="32" cy="32" r="5" fill="#f0b429"/>
+        </svg>
+        <div>
+          <strong>51hlw在线</strong>
+          <p>把条目、版本和更新时间放在一起，先核对再观看。</p>
+        </div>
+      </div>
+      <div class="foot-cols">
+        <div>
+          <h3>检索</h3>
+          <ul>
+            <li><a href="/#overview">领域概览</a></li>
+            <li><a href="/#picks">精选片单</a></li>
+            <li><a href="/#channels">分类入口</a></li>
+            <li><a href="/#ranking">本周观看榜</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>方法</h3>
+          <ul>
+            <li><a href="/#guide">观看步骤</a></li>
+            <li><a href="/#compare">版本对照</a></li>
+            <li><a href="/#faq">常见问题</a></li>
+            <li><a href="/#analysis">窗口期解析</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>内容</h3>
+          <ul>
+            <li><a href="/#updates">更新动态</a></li>
+            <li><a href="/#news">相关资讯</a></li>
+            <li><a href="/#comments">用户评论</a></li>
+            <li><a href="/#voices">创作者说</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>页面内条目、评分、文件体积与更新日期均为示例数据，用于说明检索与对照方法；真实信息以发行方、平台与修复团队公告为准。</span>
+      <span>更新时间：2026-11-08 · © 2026 51hlw在线</span>
+    </div>
+  </div>
+</footer>
+
+<button class="totop" id="toTop" aria-label="回到顶部" title="回到顶部">
+  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "51hlw在线",
+  "description": "影视资源检索与观看信息站，整理院线片、连载剧集、纪录片与经典修复片的可用观看渠道与版本差异。",
+  "inLanguage": "zh-CN",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "/#picks?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "院线片的数字版一般在上映后多久出现？",
+      "acceptedAnswer": {"@type": "Answer", "text": "《长夜将尽》间隔17天，《周末合租》间隔26天，同季度两部片子差9天。发行方与平台的协议决定窗口期，没有统一天数。"}
+    },
+    {
+      "@type": "Question",
+      "name": "1080P和4K版本看哪个更合适？",
+      "acceptedAnswer": {"@type": "Answer", "text": "屏幕小于55英寸、观看距离2米以上，1080P与4K肉眼差别有限。《长夜将尽》4K版8.4GB，1080P版2.9GB，4K对设备解码要求更高。"}
+    },
+    {
+      "@type": "Question",
+      "name": "同一部片两组中字，怎么判断哪组更准？",
+      "acceptedAnswer": {"@type": "Answer", "text": "看时间轴偏差与译名统一度。《午夜火车》A组偏差0.1秒、片名直译；B组偏差0.6秒、人物名统一。"}
+    },
+    {
+      "@type": "Question",
+      "name": "修复版为什么会改变画面比例？",
+      "acceptedAnswer": {"@type": "Answer", "text": "《城南旧事》原始放映画幅为4:3，4K修复保留原始扫描版，另提供1.85:1调色版供宽屏观看，裁切只发生在调色版。"}
+    },
+    {
+      "@type": "Question",
+      "name": "纪录片集数少，更新是不是更慢？",
+      "acceptedAnswer": {"@type": "Answer", "text": "《潮汐之间》4集平均7天更新一集，《山海食事》6集平均3.5天，集数少不代表更新慢，排期由制作方决定。"}
+    },
+    {
+      "@type": "Question",
+      "name": "标注“先行版”的条目还能看吗？",
+      "acceptedAnswer": {"@type": "Answer", "text": "《雾港谜案》720P先行版在11月7日全集归档后已下架，条目改为1080P内嵌中字。"}
+    }
+  ]
+}
+</script>
+<script>
+(function(){
+  // 移动端菜单
+  var menuBtn = document.getElementById('menuBtn');
+  var navMain = document.getElementById('navMain');
+  if(menuBtn && navMain){
+    menuBtn.addEventListener('click', function(){
+      var open = navMain.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    navMain.addEventListener('click', function(e){
+      if(e.target.tagName === 'A' && window.innerWidth <= 1060){
+        navMain.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  // 站内查找（本地索引）
+  var data = [
+    {t:'雾港谜案 第一季', k:'雾港谜案 悬疑 剧集 全集'},
+    {t:'长夜将尽', k:'长夜将尽 公路 院线片 4K'},
+    {t:'潮汐之间', k:'潮汐之间 纪录片 滩涂 候鸟'},
+    {t:'城南旧事 4K 修复版', k:'城南旧事 修复 经典 4K'},
+    {t:'山海食事', k:'山海食事 美食 纪录片 方言'},
+    {t:'午夜火车', k:'午夜火车 日本 悬疑 字幕'},
+    {t:'周末合租', k:'周末合租 喜剧 院线片'},
+    {t:'导演剪辑版', k:'导演剪辑版 长夜将尽 版本'},
+    {t:'字幕版本对比', k:'字幕 时间轴 对比 午夜火车'},
+    {t:'窗口期说明', k:'窗口期 数字版 发行'},
+    {t:'4K 修复经典片', k:'修复 4K 经典片'},
+    {t:'日本悬疑电影', k:'日本 悬疑 电影'}
+  ];
+  var input = document.getElementById('siteSearch');
+  var fb = document.getElementById('searchFb');
+  if(input && fb){
+    input.addEventListener('input', function(){
+      var q = input.value.trim().toLowerCase();
+      if(!q){ fb.classList.remove('show'); fb.innerHTML=''; return; }
+      var hits = data.filter(function(d){
+        return (d.t + ' ' + d.k).toLowerCase().indexOf(q) > -1;
+      });
+      if(hits.length === 0){
+        fb.innerHTML = '没有找到与“' + input.value.trim() + '”匹配的条目，试试片名的一部分，或换用类型词如“悬疑”“纪录片”。';
+        fb.classList.add('show');
+        return;
+      }
+      var html = '';
+      hits.slice(0,5).forEach(function(d){
+        html += '<div style="padding:5px 4px;border-bottom:1px dashed #d8e0e5">' + d.t + '</div>';
+      });
+      fb.innerHTML = html;
+      fb.classList.add('show');
+    });
+    document.addEventListener('click', function(e){
+      if(!fb.contains(e.target) && e.target !== input){ fb.classList.remove('show'); }
+    });
+  }
+
+  // 回到顶部
+  var toTop = document.getElementById('toTop');
+  if(toTop){
+    window.addEventListener('scroll', function(){
+      if(window.scrollY > 480){ toTop.classList.add('show'); }
+      else { toTop.classList.remove('show'); }
+    }, {passive:true});
+    toTop.addEventListener('click', function(){
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  }
+
+  // 侧栏滚动高亮
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('#sideNav a'));
+  var blocks = navLinks.map(function(a){
+    var id = a.getAttribute('href').split('#')[1];
+    return document.getElementById(id);
+  }).filter(Boolean);
+  function sync(){
+    var pos = window.scrollY + 140;
+    var current = null;
+    blocks.forEach(function(b){
+      if(b.offsetTop <= pos){ current = b.id; }
+    });
+    navLinks.forEach(function(a){
+      var id = a.getAttribute('href').split('#')[1];
+      a.classList.toggle('active', id === current);
+    });
+  }
+  window.addEventListener('scroll', sync, {passive:true});
+  sync();
+})();
+</script>
+</body>
+  </html>
