@@ -1,0 +1,941 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>女王骑人马vk-都市奇幻阅读与设定档案馆</title>
+<meta name="description" content="女王骑人马vk是聚焦都市奇幻设定的阅读与考据站点，整理角色谱系、战力对照、章节索引与读者实测。2026年11月更新至第37章，收录62条设定档案、14份对照表与9组常见误读澄清。">
+<meta name="keywords" content="女王骑人马vk">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%232b1e3f'/%3E%3Cpath d='M32 12l5 14 14 5-14 5-5 14-5-14-14-5 14-5z' fill='%23e8c87a'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#1d1a24;
+  --ink-2:#4a4453;
+  --ink-3:#726b7e;
+  --paper:#f7f4ee;
+  --card:#ffffff;
+  --line:#e2dcd2;
+  --line-2:#cfc6b8;
+  --brand:#2b1e3f;
+  --brand-2:#4b3169;
+  --gold:#b8892f;
+  --gold-soft:#f3e6c8;
+  --rose:#8c3a52;
+  --rose-soft:#f7e3e8;
+  --teal:#1f6b63;
+  --teal-soft:#dcefeb;
+  --r-s:6px;
+  --r-m:10px;
+  --r-l:16px;
+  --sh-s:0 1px 2px rgba(29,26,36,.06);
+  --sh-m:0 4px 14px rgba(29,26,36,.08);
+  --sp-1:6px;--sp-2:10px;--sp-3:16px;--sp-4:24px;--sp-5:36px;--sp-6:56px;
+  --fs-xs:12px;--fs-s:13px;--fs-b:15px;--fs-m:17px;--fs-l:21px;--fs-xl:27px;--fs-2xl:36px;
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  --sticky-h:96px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--font);font-size:var(--fs-b);line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--brand-2);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;display:block}
+h1,h2,h3,h4{line-height:1.3;margin:0 0 var(--sp-2)}
+p{margin:0 0 var(--sp-3)}
+ul,ol{margin:0 0 var(--sp-3);padding-left:1.2em}
+section[id]{scroll-margin-top:var(--sticky-h)}
+.wrap{max-width:1160px;margin:0 auto;padding:0 var(--sp-4)}
+
+/* 吸顶区 */
+.sticktop{position:sticky;top:0;z-index:60}
+.notice{
+  background:var(--brand);color:#efe9dd;font-size:var(--fs-s);
+  padding:7px var(--sp-4);
+}
+.notice .wrap{display:flex;gap:var(--sp-3);align-items:center;flex-wrap:wrap;padding:0}
+.notice b{color:#f0d79b;font-weight:600}
+.notice a{color:#f0d79b;text-decoration:underline;text-underline-offset:2px}
+.sitehead{
+  background:rgba(247,244,238,.94);
+  backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--line);
+  box-shadow:var(--sh-s);
+}
+.sitehead .wrap{display:flex;align-items:center;gap:var(--sp-4);padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:var(--sp-2);flex:0 0 auto}
+.brand svg{width:38px;height:38px;flex:0 0 auto}
+.brand-txt{display:flex;flex-direction:column;line-height:1.2}
+.brand-txt strong{font-size:var(--fs-m);letter-spacing:.02em;color:var(--brand)}
+.brand-txt span{font-size:11px;color:var(--ink-3);letter-spacing:.12em}
+.mainnav{display:flex;gap:2px;flex-wrap:wrap;flex:1 1 auto}
+.mainnav a{
+  font-size:var(--fs-s);color:var(--ink-2);padding:6px 9px;border-radius:var(--r-s);
+}
+.mainnav a:hover{background:var(--gold-soft);color:var(--brand);text-decoration:none}
+.headtools{display:flex;align-items:center;gap:var(--sp-2);flex:0 0 auto}
+.searchbox{display:flex;align-items:center;gap:4px;border:1px solid var(--line-2);background:#fff;border-radius:var(--r-s);padding:2px 2px 2px 8px}
+.searchbox input{
+  border:0;background:transparent;font-family:var(--font);font-size:var(--fs-s);
+  width:132px;padding:5px 0;color:var(--ink);outline:none;
+}
+.searchbox button{
+  border:0;background:var(--brand);color:#f4efe4;font-family:var(--font);
+  font-size:var(--fs-xs);padding:5px 10px;border-radius:4px;cursor:pointer;
+}
+.searchbox button:focus-visible,.menubtn:focus-visible,.mainnav a:focus-visible,.btn:focus-visible,a:focus-visible,summary:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px;
+}
+.menubtn{
+  display:none;border:1px solid var(--line-2);background:#fff;border-radius:var(--r-s);
+  font-family:var(--font);font-size:var(--fs-s);padding:6px 10px;cursor:pointer;color:var(--brand);
+}
+.searchstate{font-size:var(--fs-xs);color:var(--rose);padding:4px var(--sp-4) 0;display:none}
+.searchstate.on{display:block}
+
+/* 首屏 */
+.hero{
+  position:relative;overflow:hidden;
+  background:linear-gradient(160deg,#2b1e3f 0%,#3a2752 46%,#221730 100%);
+  color:#f2ece0;padding:var(--sp-6) 0 42px;
+}
+.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:var(--sp-5);align-items:center}
+.hero-tag{
+  display:inline-block;font-size:var(--fs-xs);letter-spacing:.16em;color:#e8c87a;
+  border:1px solid rgba(232,200,122,.45);border-radius:999px;padding:3px 12px;margin-bottom:var(--sp-3);
+}
+.hero h1{font-size:var(--fs-2xl);color:#fff;margin-bottom:var(--sp-3);letter-spacing:.01em}
+.hero p.lead{color:#d9d0e4;max-width:34em;margin-bottom:var(--sp-4)}
+.hero-actions{display:flex;gap:var(--sp-2);flex-wrap:wrap;margin-bottom:var(--sp-4)}
+.btn{
+  display:inline-block;font-size:var(--fs-s);padding:9px 18px;border-radius:var(--r-s);
+  border:1px solid transparent;transition:transform .18s ease,background .18s ease;
+}
+.btn:hover{text-decoration:none;transform:translateY(-2px)}
+.btn-primary{background:#e8c87a;color:#2b1e3f;font-weight:600}
+.btn-ghost{border-color:rgba(240,231,211,.5);color:#f0e7d3}
+.btn-ghost:hover{background:rgba(240,231,211,.12)}
+.hero-stats{display:flex;gap:var(--sp-4);flex-wrap:wrap;border-top:1px solid rgba(240,231,211,.18);padding-top:var(--sp-3);list-style:none;padding-left:0;margin:0}
+.hero-stats li{font-size:var(--fs-xs);color:#c3b8d3}
+.hero-stats b{display:block;font-size:var(--fs-m);color:#f0d79b;font-weight:600;letter-spacing:.02em}
+.hero-art{position:relative;height:320px}
+.hero-art svg{width:100%;height:100%;display:block}
+
+/* 通用板块标题 */
+.sec{padding:var(--sp-6) 0}
+.sec:nth-of-type(even){background:#fffdf9}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:var(--sp-3);margin-bottom:var(--sp-4);flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:var(--sp-2)}
+.sec-head h2{font-size:var(--fs-xl);color:var(--brand);margin:0;position:relative;padding-left:14px}
+.sec-head h2::before{content:"";position:absolute;left:0;top:.22em;width:5px;height:1.05em;background:var(--gold);border-radius:2px}
+.sec-head .hint{font-size:var(--fs-xs);color:var(--ink-3);letter-spacing:.04em}
+.sec-sub{font-size:var(--fs-s);color:var(--ink-3);margin:-6px 0 var(--sp-4);max-width:52em}
+
+/* 布局 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:var(--sp-5);align-items:start}
+.maincol{min-width:0}
+.sidebar{position:sticky;top:calc(var(--sticky-h) + 12px);font-size:var(--fs-s)}
+.side-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r-m);padding:var(--sp-3);margin-bottom:var(--sp-3);box-shadow:var(--sh-s)}
+.side-card h3{font-size:var(--fs-b);color:var(--brand);margin:0 0 var(--sp-2);padding-bottom:6px;border-bottom:1px dashed var(--line-2)}
+.side-card ul{list-style:none;margin:0;padding:0}
+.side-card li{margin-bottom:2px}
+.side-card li a{display:block;padding:4px 6px;border-radius:4px;color:var(--ink-2);font-size:var(--fs-s)}
+.side-card li a.active{background:var(--gold-soft);color:var(--brand);font-weight:600}
+.side-card li a:hover{background:#f2eee4;text-decoration:none}
+
+/* 概览 */
+.overview-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--sp-3)}
+.ov-item{background:var(--card);border:1px solid var(--line);border-radius:var(--r-m);padding:var(--sp-3);box-shadow:var(--sh-s)}
+.ov-item h3{font-size:var(--fs-b);color:var(--brand-2);margin-bottom:6px}
+.ov-item p{font-size:var(--fs-s);color:var(--ink-2);margin:0}
+.ov-item .num{font-family:Georgia,serif;font-size:var(--fs-l);color:var(--gold);font-weight:700}
+
+/* 精选推荐 */
+.feature-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--sp-3)}
+.feat{background:var(--card);border:1px solid var(--line);border-radius:var(--r-m);overflow:hidden;box-shadow:var(--sh-s);transition:box-shadow .2s ease,transform .2s ease}
+.feat:hover{box-shadow:var(--sh-m);transform:translateY(-3px)}
+.feat img{width:100%;height:150px;object-fit:cover}
+.feat .body{padding:var(--sp-3)}
+.feat .kicker{font-size:11px;letter-spacing:.1em;color:var(--rose);margin-bottom:4px}
+.feat h3{font-size:var(--fs-b);margin-bottom:6px;color:var(--brand)}
+.feat p{font-size:var(--fs-s);color:var(--ink-2);margin:0}
+.feat .meta{font-size:11px;color:var(--ink-3);margin-top:8px}
+
+/* 最新更新 */
+.update-list{list-style:none;margin:0;padding:0;border-left:2px solid var(--line-2)}
+.update-list li{position:relative;padding:0 0 var(--sp-3) var(--sp-4)}
+.update-list li::before{content:"";position:absolute;left:-6px;top:8px;width:10px;height:10px;border-radius:50%;background:var(--gold);border:2px solid var(--paper)}
+.update-list time{font-size:var(--fs-xs);color:var(--ink-3);letter-spacing:.04em}
+.update-list strong{display:block;font-size:var(--fs-b);color:var(--brand);margin:2px 0 2px}
+.update-list span{font-size:var(--fs-s);color:var(--ink-2)}
+
+/* 分类入口 / 标签索引 */
+.tagindex{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.tagindex li a{
+  display:inline-block;font-size:var(--fs-s);padding:6px 12px;border-radius:999px;
+  border:1px solid var(--line-2);background:var(--card);color:var(--ink-2);
+}
+.tagindex li a:hover{background:var(--teal-soft);border-color:var(--teal);color:var(--teal);text-decoration:none}
+.tagindex li a b{color:var(--gold);font-weight:600;margin-left:4px}
+
+/* 深度解析 */
+.deep{background:var(--card);border:1px solid var(--line);border-radius:var(--r-l);padding:var(--sp-4) var(--sp-4) var(--sp-3);box-shadow:var(--sh-s)}
+.deep h2{font-size:var(--fs-l);color:var(--brand);margin-bottom:var(--sp-2)}
+.deep h3{font-size:var(--fs-b);color:var(--brand-2);margin-top:var(--sp-4);padding-top:var(--sp-3);border-top:1px dashed var(--line-2)}
+.deep h3:first-of-type{border-top:0;padding-top:0;margin-top:0}
+.deep p{color:var(--ink)}
+.deep blockquote{
+  margin:0 0 var(--sp-3);padding:var(--sp-2) var(--sp-3);background:var(--gold-soft);
+  border-left:3px solid var(--gold);border-radius:0 var(--r-s) var(--r-s) 0;font-size:var(--fs-s);color:#5a4520;
+}
+.cmp-table{width:100%;border-collapse:collapse;font-size:var(--fs-s);margin-bottom:var(--sp-3)}
+.cmp-table caption{text-align:left;font-size:var(--fs-xs);color:var(--ink-3);padding-bottom:6px}
+.cmp-table th,.cmp-table td{border:1px solid var(--line);padding:6px 9px;text-align:left;vertical-align:top}
+.cmp-table thead th{background:#f3efe6;color:var(--brand);font-weight:600}
+.cmp-table tbody tr:nth-child(even) td{background:#fbf9f4}
+
+/* 体验指南 步骤 */
+.steps{list-style:none;counter-reset:st;margin:0;padding:0;display:grid;gap:var(--sp-2)}
+.steps li{counter-increment:st;background:var(--card);border:1px solid var(--line);border-radius:var(--r-m);padding:var(--sp-3) var(--sp-3) var(--sp-3) 66px;position:relative;font-size:var(--fs-s);color:var(--ink-2)}
+.steps li::before{
+  content:counter(st,decimal-leading-zero);position:absolute;left:var(--sp-3);top:50%;transform:translateY(-50%);
+  font-family:Georgia,serif;font-size:var(--fs-l);color:var(--gold);font-weight:700;
+}
+.steps li b{color:var(--brand);display:block;font-size:var(--fs-b)}
+
+/* FAQ */
+details.faq{background:var(--card);border:1px solid var(--line);border-radius:var(--r-m);margin-bottom:8px;padding:0}
+details.faq summary{cursor:pointer;padding:12px var(--sp-3);font-size:var(--fs-b);color:var(--brand);font-weight:600;list-style:none}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{content:"+";float:right;color:var(--gold);font-weight:400;font-size:var(--fs-m)}
+details.faq[open] summary::after{content:"−"}
+details.faq .ans{padding:0 var(--sp-3) var(--sp-3);font-size:var(--fs-s);color:var(--ink-2);border-top:1px dashed var(--line);padding-top:var(--sp-2)}
+
+/* 评论 */
+.comments{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--sp-3)}
+.cmt{background:var(--card);border:1px solid var(--line);border-radius:var(--r-m);padding:var(--sp-3);font-size:var(--fs-s)}
+.cmt .who{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.cmt .av{width:28px;height:28px;border-radius:50%;background:var(--teal-soft);color:var(--teal);font-size:12px;display:flex;align-items:center;justify-content:center;font-weight:700}
+.cmt .who b{font-size:var(--fs-s);color:var(--brand)}
+.cmt .who time{font-size:11px;color:var(--ink-3);margin-left:auto}
+.cmt p{margin:0;color:var(--ink-2)}
+.cmt .stars{color:var(--gold);font-size:12px;letter-spacing:2px;margin-top:6px}
+
+/* 资讯 */
+.newslist{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+.newslist li{border-bottom:1px solid var(--line);padding:10px 0;display:flex;gap:var(--sp-3);align-items:baseline}
+.newslist time{flex:0 0 88px;font-size:var(--fs-xs);color:var(--ink-3)}
+.newslist a{font-size:var(--fs-s);color:var(--ink);flex:1 1 auto}
+.newslist .src{font-size:11px;color:var(--ink-3);flex:0 0 auto}
+
+/* 推荐标签 + 引语 */
+.quotes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--sp-3)}
+.quote-card{background:var(--rose-soft);border:1px solid #eccfд7;border-radius:var(--r-m);padding:var(--sp-3);font-size:var(--fs-s);color:#5c2536}
+.quote-card p{margin-bottom:8px}
+.quote-card cite{font-style:normal;font-size:11px;color:#8c3a52;letter-spacing:.04em}
+
+/* 榜单 */
+.rank{list-style:none;counter-reset:rk;margin:0;padding:0;display:grid;gap:6px}
+.rank li{counter-increment:rk;background:var(--card);border:1px solid var(--line);border-radius:var(--r-s);padding:10px 12px 10px 50px;position:relative;font-size:var(--fs-s)}
+.rank li::before{content:counter(rk);position:absolute;left:12px;top:50%;transform:translateY(-50%);font-family:Georgia,serif;font-size:var(--fs-m);color:var(--gold);font-weight:700}
+.rank b{color:var(--brand)}
+.rank span{color:var(--ink-3);font-size:var(--fs-xs);margin-left:6px}
+
+/* 页尾 */
+footer{background:var(--brand);color:#cdc3da;padding:var(--sp-5) 0 var(--sp-4);font-size:var(--fs-s);margin-top:var(--sp-5)}
+footer .fgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:var(--sp-4);margin-bottom:var(--sp-4)}
+footer h4{color:#f0e7d3;font-size:var(--fs-s);letter-spacing:.08em;margin:0 0 var(--sp-2);font-weight:600}
+footer ul{list-style:none;margin:0;padding:0}
+footer li{margin-bottom:4px}
+footer a{color:#cdc3da}
+footer a:hover{color:#f0d79b}
+.fbrand{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.fbrand svg{width:32px;height:32px}
+.fbrand strong{color:#fff;font-size:var(--fs-b)}
+footer .fpos{color:#a99cc0;font-size:var(--fs-xs);line-height:1.7;max-width:24em}
+.fbottom{border-top:1px solid rgba(240,231,211,.16);padding-top:var(--sp-3);display:flex;justify-content:space-between;gap:var(--sp-3);flex-wrap:wrap;font-size:11px;color:#9a8db2}
+.fbottom .upd{color:#a99cc0}
+
+/* 回顶 */
+#totop{
+  position:fixed;right:18px;bottom:22px;z-index:70;width:42px;height:42px;border-radius:50%;
+  border:1px solid var(--line-2);background:var(--card);color:var(--brand);font-size:18px;
+  cursor:pointer;box-shadow:var(--sh-m);display:none;
+}
+#totop.on{display:block}
+
+/* 平板 */
+@media (max-width:960px){
+  .hero .wrap{grid-template-columns:1fr;gap:var(--sp-4)}
+  .hero-art{height:200px;order:-1}
+  .layout{grid-template-columns:1fr}
+  .sidebar{position:static;margin-top:var(--sp-4)}
+  .feature-list,.overview-grid,.comments,.quotes{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .quotes{grid-template-columns:repeat(2,minmax(0,1fr))}
+  footer .fgrid{grid-template-columns:1fr 1fr}
+}
+/* 手机 */
+@media (max-width:640px){
+  :root{--sticky-h:120px;--fs-2xl:28px;--fs-xl:22px;--sp-6:38px}
+  .wrap{padding:0 var(--sp-3)}
+  .notice{font-size:12px}
+  .sitehead .wrap{gap:var(--sp-2)}
+  .menubtn{display:inline-block}
+  .mainnav{display:none;order:5;flex-basis:100%;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--r-m);padding:6px;margin-top:4px}
+  .mainnav.open{display:flex}
+  .mainnav a{padding:8px 10px}
+  .searchbox input{width:96px}
+  .headtools{margin-left:auto}
+  .feature-list,.overview-grid,.comments,.quotes{grid-template-columns:1fr}
+  .hero{padding:var(--sp-4) 0 30px}
+  .hero-stats{gap:var(--sp-3)}
+  .hero-stats li{flex:0 0 calc(50% - var(--sp-3))}
+  .sec{padding:var(--sp-5) 0}
+  .deep{padding:var(--sp-3)}
+  .cmp-table{display:block;overflow-x:auto}
+  .newslist li{flex-wrap:wrap;gap:2px}
+  .newslist time{flex-basis:auto}
+  footer .fgrid{grid-template-columns:1fr}
+  #totop{bottom:16px;right:12px}
+  .steps li{padding-left:56px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+  .btn:hover,.feat:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="sticktop">
+  <div class="notice" role="status">
+    <div class="wrap">
+      <span><b>女王骑人马vk</b> 更新：11月6日发布第37章「铁蹄过桥」，战力对照表同步至 v4.2；11月3日新增第14份角色谱系图。</span>
+      <a href="/#updates">查看更新记录</a>
+    </div>
+  </div>
+  <header class="sitehead">
+    <div class="wrap">
+      <a class="brand" href="/#top" aria-label="女王骑人马vk 首页">
+        <svg viewBox="0 0 64 64" role="img" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#2b1e3f"/>
+          <path d="M32 10l4.6 12.8L49 27l-12.4 4.2L32 44l-4.6-12.8L15 27l12.4-4.2z" fill="#e8c87a"/>
+          <circle cx="32" cy="27" r="3.2" fill="#2b1e3f"/>
+          <path d="M12 48h40" stroke="#7d639c" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-txt">
+          <strong>女王骑人马vk</strong>
+          <span>SETTING ARCHIVE</span>
+        </span>
+      </a>
+      <nav class="mainnav" id="mainnav" aria-label="主题导航">
+        <a href="/#overview">领域概览</a>
+        <a href="/#picks">精选推荐</a>
+        <a href="/#updates">最新更新</a>
+        <a href="/#channels">分类入口</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#faq">常见疑问</a>
+        <a href="/#voices">读者评论</a>
+        <a href="/#news">相关资讯</a>
+      </nav>
+      <div class="headtools">
+        <form class="searchbox" role="search" id="searchform" onsubmit="return false;">
+          <label for="q" style="position:absolute;left:-9999px">站内查找</label>
+          <input id="q" type="search" placeholder="查找角色 / 章节 / 设定" autocomplete="off">
+          <button type="button" id="searchbtn">查找</button>
+        </form>
+        <button class="menubtn" id="menubtn" type="button" aria-expanded="false" aria-controls="mainnav">菜单</button>
+      </div>
+    </div>
+    <div class="searchstate" id="searchstate" aria-live="polite"></div>
+  </header>
+</div>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <div>
+        <span class="hero-tag">都市奇幻 · 设定考据</span>
+        <h1 id="hero-title">女王骑人马vk</h1>
+        <p class="lead">一支从旧城区马厩出发的巡夜队，在铁蹄与缰绳之间维系着人与半人马族群的停战约定。这里收录角色谱系、战力对照、章节索引，以及读者亲自跑过的路线记录。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/#deep">读深度解析</a>
+          <a class="btn btn-ghost" href="/#updates">看第37章更新</a>
+        </div>
+        <ul class="hero-stats">
+          <li><b>62</b>设定档案</li>
+          <li><b>37</b>正文章节</li>
+          <li><b>14</b>战力对照表</li>
+          <li><b>9</b>误读澄清</li>
+        </ul>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 420 320" role="img">
+          <defs>
+            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#3a2752"/>
+              <stop offset="1" stop-color="#1b1329"/>
+            </linearGradient>
+            <linearGradient id="moon" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#f6e6b4"/>
+              <stop offset="1" stop-color="#d8b060"/>
+            </linearGradient>
+          </defs>
+          <rect x="0" y="0" width="420" height="320" rx="18" fill="url(#sky)"/>
+          <circle cx="312" cy="74" r="38" fill="url(#moon)" opacity=".92"/>
+          <circle cx="298" cy="66" r="7" fill="#c99f4c" opacity=".45"/>
+          <circle cx="324" cy="88" r="5" fill="#c99f4c" opacity=".35"/>
+          <g stroke="#5c4877" stroke-width="1.4" opacity=".7">
+            <path d="M20 250h380"/>
+            <path d="M20 268h380"/>
+            <path d="M20 232h380"/>
+          </g>
+          <g fill="#2f2144">
+            <path d="M0 236l46-26 38 22 52-30 44 26 58-20 50 28 62-22 40 24v40H0z"/>
+          </g>
+          <g transform="translate(120,150)">
+            <path d="M72 44c-22 0-38 12-50 30l-14 22h22l10-14h66l8 14h22l-16-26c-12-18-28-26-48-26z" fill="#1c1428"/>
+            <path d="M96 26c0-10-8-18-18-18s-18 8-18 18 8 18 18 18 18-8 18-18z" fill="#e8c87a" opacity=".85"/>
+            <path d="M78 8l6 14 14 4-14 4-6 14-6-14-14-4 14-4z" fill="#f6e6b4"/>
+          </g>
+          <g stroke="#e8c87a" stroke-width="1.6" fill="none" opacity=".8">
+            <path d="M40 190c26-18 54-18 80 0"/>
+            <path d="M300 190c26-18 54-18 80 0"/>
+          </g>
+          <g fill="#c9b8e0" opacity=".8">
+            <circle cx="60" cy="60" r="1.6"/><circle cx="120" cy="40" r="1.2"/>
+            <circle cx="210" cy="56" r="1.5"/><circle cx="380" cy="140" r="1.3"/>
+            <circle cx="86" cy="120" r="1.2"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap layout" style="padding-top:var(--sp-5)">
+
+    <div class="maincol">
+
+      <!-- 领域概览 -->
+      <section class="sec" id="overview" aria-labelledby="ov-h" style="padding-top:0">
+        <div class="sec-head">
+          <h2 id="ov-h">领域概览：先弄懂三方构成的停战结构</h2>
+          <span class="hint">4 个基础概念</span>
+        </div>
+        <p class="sec-sub">故事的门槛不在打斗，而在“谁有资格上桥”。搞清巡夜队、半人马部族与市政马政署的权限边界，后面 37 章的冲突八成都能对上号。</p>
+        <div class="overview-grid">
+          <article class="ov-item">
+            <h3>巡夜队 · 女王的直属七骑</h3>
+            <p><span class="num">07</span> 席位，实编 5 人。成员佩缰环，凭缰环口令调停夜间冲突；第29章后第六席空缺，至今未补。名单见角色谱系图 v3。</p>
+          </article>
+          <article class="ov-item">
+            <h3>半人马部族 · 铁蹄三帐</h3>
+            <p>北帐、过桥帐、旧厩帐三支。<span class="num">214</span> 名成体登记在册，迁徙须持马政署通行竹牌，竹牌编号按年重排，2026 年批次为「丙午」。</p>
+          </article>
+          <article class="ov-item">
+            <h3>马政署 · 仲裁与通行</h3>
+            <p>负责竹牌发放与桥权裁定。署长岑牧在 10 月 18 日的听证中明确：桥面承重以八骑为限，超载即视为越界。</p>
+          </article>
+          <article class="ov-item">
+            <h3>桥权 · 全书最大暗线</h3>
+            <p>第9章首次提到“桥不过夜”，第33章才揭出这四字本是旧厩帐的停战誓词，被马政署挪作限行条文，含义完全反转。</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- 精选内容推荐 -->
+      <section class="sec" id="picks" aria-labelledby="pk-h">
+        <div class="sec-head">
+          <h2 id="pk-h">精选内容推荐：四个读起来不吃力的入口</h2>
+          <span class="hint">编辑挑选 · 非全量</span>
+        </div>
+        <div class="feature-list">
+          <article class="feat">
+            <img src="https://picsum.photos/seed/nvwangqirenma-01/600/300" width="600" height="300" loading="lazy" alt="旧城区石桥与铁蹄印的夜景插图" style="object-fit:cover">
+            <div class="body">
+              <div class="kicker">章节导读</div>
+              <h3>第37章「铁蹄过桥」逐段拆解</h3>
+              <p>补给车在第4段被拦，缰环口令对不上号。真正的冲突点落在一枚 11 月 6 日才换发的丙午竹牌上。</p>
+              <div class="meta">11月6日 · 约 2400 字</div>
+            </div>
+          </article>
+          <article class="feat">
+            <img src="https://picsum.photos/seed/nvwangqirenma-02/600/300" width="600" height="300" loading="lazy" alt="并列排布的角色谱系关系图局部" style="object-fit:cover">
+            <div class="body">
+              <div class="kicker">角色谱系</div>
+              <h3>七骑名录与缰环归属对照</h3>
+              <p>哪一席由谁继承，缰环在哪一章易手，一律用表格落地。第五席的两次转交最容易看漏。</p>
+              <div class="meta">11月3日更新 · 含 7 张卡片</div>
+            </div>
+          </article>
+          <article class="feat">
+            <img src="https://picsum.photos/seed/nvwangqirenma-03/600/300" width="600" height="300" loading="lazy" alt="堆叠的战力对照表格手稿" style="object-fit:cover">
+            <div class="body">
+              <div class="kicker">战力对照</div>
+              <h3>半人马冲击力与骑手防御的量化比较</h3>
+              <p>用书中给出的三组数字——起速、桥面停留秒数、缰环冷却——做横向排名，避免只凭印象排序。</p>
+              <div class="meta">11月6日 · v4.2</div>
+            </div>
+          </article>
+          <article class="feat">
+            <img src="https://picsum.photos/seed/nvwangqirenma-04/600/300" width="600" height="300" loading="lazy" alt="夜间巡夜路线的手绘地图" style="object-fit:cover">
+            <div class="body">
+              <div class="kicker">路线实测</div>
+              <h3>旧城区三段巡夜路线怎么走</h3>
+              <p>读者带着第12章的原文逐点打卡，三处地名与现实街道对得上，只有一处渡口在 2021 年已填埋。</p>
+              <div class="meta">11月1日 · 读者投稿</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 最新更新 -->
+      <section class="sec" id="updates" aria-labelledby="up-h">
+        <div class="sec-head">
+          <h2 id="up-h">最新更新：本周改了什么</h2>
+          <span class="hint">按时间倒序</span>
+        </div>
+        <ol class="update-list">
+          <li>
+            <time datetime="2026-11-06">11月6日</time>
+            <strong>第37章「铁蹄过桥」上线，正文 4800 字</strong>
+            <span>同章附录补入丙午竹牌换发流程；战力对照表从 v4.1 升到 v4.2，改动 3 处数值。</span>
+          </li>
+          <li>
+            <time datetime="2026-11-03">11月3日</time>
+            <strong>角色谱系图第14版发布</strong>
+            <span>新增旧厩帐三位长老的师承线；修正第5章“缰环双持”旧标注，此前误记为一人持有。</span>
+          </li>
+          <li>
+            <time datetime="2026-10-30">10月30日</time>
+            <strong>误读澄清第9条：桥面承重并非八骑封顶</strong>
+            <span>原文第22章写“八骑为限”，指的是同时上桥人数，并非累计通行量，两句常被混作一句。</span>
+          </li>
+          <li>
+            <time datetime="2026-10-24">10月24日</time>
+            <strong>读者实测档案收录第6份</strong>
+            <span>投稿人「夜行灯」记录旧城区南渡口、马厩巷、断栏坡三处坐标，附 14 张现场照说明。</span>
+          </li>
+          <li>
+            <time datetime="2026-10-18">10月18日</time>
+            <strong>马政署听证纪要整理完毕</strong>
+            <span>署长岑牧的六段发言已全文录入，其中两句涉及桥权归属，与第33章誓词原文有出入。</span>
+          </li>
+        </ol>
+      </section>
+
+      <!-- 分类入口 -->
+      <section class="sec" id="channels" aria-labelledby="ch-h">
+        <div class="sec-head">
+          <h2 id="ch-h">分类入口：按你手上的问题选</h2>
+          <span class="hint">10 个频道</span>
+        </div>
+        <p class="sec-sub">频道名直接用读者会搜的词。每条后面的数字是栏目内现有条目数，不算推荐位。</p>
+        <ul class="tagindex">
+          <li><a href="/#deep">女王骑人马vk桥权争议 <b>8</b></a></li>
+          <li><a href="/#picks">半人马铁蹄三帐谱系 <b>12</b></a></li>
+          <li><a href="/#guide">缰环口令使用手册 <b>6</b></a></li>
+          <li><a href="/#faq">丙午竹牌换发流程 <b>5</b></a></li>
+          <li><a href="/#deep">战力对照表 v4.2 <b>14</b></a></li>
+          <li><a href="/#updates">第37章铁蹄过桥 <b>1</b></a></li>
+          <li><a href="/#voices">七骑名录与继承顺序 <b>7</b></a></li>
+          <li><a href="/#news">马政署听证纪要 <b>4</b></a></li>
+          <li><a href="/#guide">旧城区巡夜路线 <b>9</b></a></li>
+          <li><a href="/#faq">桥不过夜誓词考 <b>3</b></a></li>
+        </ul>
+      </section>
+
+      <!-- 深度解析 -->
+      <section class="sec" id="deep" aria-labelledby="dp-h">
+        <div class="sec-head">
+          <h2 id="dp-h">深度解析：桥权归属被改写的那三个月</h2>
+          <span class="hint">唯一主体阅读区</span>
+        </div>
+        <article class="deep">
+          <p>普遍说法是：桥权一直在马政署手上，巡夜队只是执行者。这个说法在第33章之后站不住脚。它成立的前提，是把「桥不过夜」当成马政署立的限行条文；可原文第33章旧厩帐长老乌勒的证词里，这四字本来是停战誓词，意思是夜间不越桥追击，约束的是半人马自己，跟通行许可没关系。</p>
+
+          <h3>一次条文挪用：从第9章到第33章</h3>
+          <p>第9章，马政署文书首次引用「桥不过夜」，落款日期写作“丙午年三月初七”，并注明“援引旧厩帐誓词”。第22章再引，落款只剩“马政署令”，来源注脚被删。第33章乌勒当面对质，拿出 1998 年刻在旧厩门楣上的原文拓片，字序为“不过夜桥”，与文书引用的「桥不过夜」正好颠倒。三个时间点串起来看：条文没改一个字，解释权被换了手。</p>
+
+          <blockquote>乌勒在第33章原话：“誓词是让马蹄夜里别过桥，不是让桥夜里别过马蹄。”——引自第33章第2节，2026年10月12日连载版。</blockquote>
+
+          <h3>三方说法对照：谁在回避“解释权”这个词</h3>
+          <table class="cmp-table">
+            <caption>依据：第33章正文、10月18日听证纪要、旧厩门楣拓片照片（读者「夜行灯」提供，编号 A-06）</caption>
+            <thead>
+              <tr><th>主体</th><th>核心主张</th><th>给出的依据</th><th>未回应的点</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>马政署</td><td>桥面通行须持牌，署方保留裁定权</td><td>丙午竹牌制度，2026年换发批次共 214 枚</td><td>为何删去第22章的来源注脚</td></tr>
+              <tr><td>旧厩帐</td><td>誓词约束对象是部族，不是桥</td><td>1998年门楣拓片，字序“不过夜桥”</td><td>1998年之前的文本形态</td></tr>
+              <tr><td>巡夜队</td><td>只认缰环口令，不裁定桥权</td><td>第29章第六席空缺后的临时授权记录</td><td>临时授权到何时失效</td></tr>
+            </tbody>
+          </table>
+
+          <h3>可核对的三组数字</h3>
+          <p>判断这条线是否被写成“制度之争”，看数字比看措辞可靠。第一组：竹牌换发从 2026 年 9 月 1 日开始，11 月 6 日已换 187 枚，未换 27 枚，未换者集中在过桥帐。第二组：第22章写“八骑为限”，听证纪要第4段把“八骑”解释为同时上桥人数；两处数字相同，指向不同。第三组：旧厩门楣拓片宽 42 厘米，比马政署存档的同名文书拓片窄 6 厘米，尺寸差异在第33章插图中也能看到。</p>
+
+          <h3>我的判断，以及它可能错在哪</h3>
+          <p>第33章之后，桥权实际处于“双轨”：署方管牌，部族管誓词，巡夜队夹在中间执行口令。这个判断的反证很明确——如果第38章补出 1998 年之前马政署就已参与立誓，那“挪用”一说会退成“合立后分家”，性质完全不同。另一个未定项是第六席，第29章留下的空缺至今没补，若由过桥帐出身者接任，双轨说会被进一步坐实；若由署方指派，则倾向单轨。</p>
+          <p>还有一层容易被略过：第37章补给车被拦，用的正是未换发的那 27 枚竹牌之一。缰环口令对不上号不是因为口令错了，是因为牌号还停在旧批次。这条细节把制度问题落到了具体物件上，比任何表态都更有说服力。</p>
+        </article>
+      </section>
+
+      <!-- 体验指南 -->
+      <section class="sec" id="guide" aria-labelledby="gd-h">
+        <div class="sec-head">
+          <h2 id="gd-h">体验指南：第一次进这个设定，按四步走</h2>
+          <span class="hint">编号步骤</span>
+        </div>
+        <ol class="steps">
+          <li><b>先确认版本号</b>读到任何“桥权”“八骑”字样，先看页面标注的版本。v4.1 及以前把第5章缰环记成一人双持，v4.2 已改为两人分持，照着旧版对人物关系会乱。</li>
+          <li><b>把三方权限画成一张图</b>巡夜队管口令、马政署管竹牌、部族管誓词。三者交叉点只有桥面。画出来之后，第9、22、33 三章的引文变化一眼可见。</li>
+          <li><b>读章节时对照战力表</b>战力表给的是起速、桥面停留秒数、缰环冷却三项，不含心理描写。第37章的僵持能撑 40 秒，靠的是冷却差，不是谁更强。</li>
+          <li><b>最后看读者实测</b>路线档案里有具体坐标和年份，比如南渡口 2021 年填埋。实地对不上不一定是写错，可能只是时间差。</li>
+        </ol>
+      </section>
+
+      <!-- FAQ -->
+      <section class="sec" id="faq" aria-labelledby="fq-h">
+        <div class="sec-head">
+          <h2 id="fq-h">常见疑问：九个被问得最多的问题</h2>
+          <span class="hint">点击展开</span>
+        </div>
+        <details class="faq" open>
+          <summary>丙午竹牌和旧批次竹牌有什么区别？</summary>
+          <div class="ans">丙午是 2026 年换发批次的年号刻记，牌面多一道横纹；旧批次无横纹，编号按旧序。第37章被拦的补给车挂的是旧批次，所以缰环口令读不出来。截至 11 月 6 日，214 枚中已换 187 枚。</div>
+        </details>
+        <details class="faq">
+          <summary>缰环口令到底由谁签发？</summary>
+          <div class="ans">由巡夜队当值骑手签发，签发记录附在每章附录。第29章第六席空缺后改由临时授权人代签，代签有效期原文没写，这是目前最大的空白。</div>
+        </details>
+        <details class="faq">
+          <summary>“八骑为限”是指总共只能过八骑吗？</summary>
+          <div class="ans">不是累计。10月18日听证纪要第4段把“八骑”解释为同一时刻桥面人数上限，与通行总量无关。第22章的表述容易误读，误读澄清第9条专门讨论这一句。</div>
+        </details>
+        <details class="faq">
+          <summary>铁蹄三帐里哪一帐最难打交道？</summary>
+          <div class="ans">过桥帐。该帐 27 枚竹牌未换发中的多数集中于此，且第33章对质时长老未到场。北帐与旧厩帐在 10 月已各自完成换发。</div>
+        </details>
+        <details class="faq">
+          <summary>第29章之后第六席为什么一直空着？</summary>
+          <div class="ans">正文只写“暂缺”，没给理由。谱系图第14版把三位候选人都标成待定，其中一位出自过桥帐。这条空缺与桥权双轨说直接相关，第38章可能给答案。</div>
+        </details>
+        <details class="faq">
+          <summary>旧城区巡夜路线能实地走吗？</summary>
+          <div class="ans">三段里有两段可走，南渡口在 2021 年填埋，只剩路名。读者「夜行灯」的实测档案标了 14 张现场照，断栏坡那段坡度和原文描写的“铁蹄打滑”对得上。</div>
+        </details>
+        <details class="faq">
+          <summary>战力对照表为什么不给综合分？</summary>
+          <div class="ans">三项指标量纲不同：起速用秒，桥面停留用秒，缰环冷却用分钟。强行加总会掩盖冷却差，第37章 40 秒僵持正是冷却差造成的。</div>
+        </details>
+        <details class="faq">
+          <summary>1998 年门楣拓片的字序争议有定论吗？</summary>
+          <div class="ans">没有。拓片本身在，字序读作“不过夜桥”；马政署存档的同名文书拓片窄 6 厘米，字序读作“桥不过夜”。两件实物都在，读法不同，第33章只呈现，没裁定。</div>
+        </details>
+        <details class="faq">
+          <summary>读者实测档案怎么投稿？</summary>
+          <div class="ans">投稿入口在页尾“参与”分组。要求写清坐标、年份、对照的章节号，附现场照。目前收录 6 份，最近一份是 10月24日的「夜行灯」。</div>
+        </details>
+      </section>
+
+      <!-- 读者评论 -->
+      <section class="sec" id="voices" aria-labelledby="vo-h">
+        <div class="sec-head">
+          <h2 id="vo-h">读者评论：好评差评都留着</h2>
+          <span class="hint">6 条 · 含中性</span>
+        </div>
+        <div class="comments">
+          <article class="cmt">
+            <div class="who"><span class="av">灯</span><b>夜行灯</b><time datetime="2026-11-06">11月6日</time></div>
+            <p>第37章补给车那段写得好，旧批次竹牌读不出缰环口令，这个细节比前面几章的争论都实在。我按丙午编号去查，187/214 的数据和第33章附录对得上。</p>
+            <div class="stars">★★★★★</div>
+          </article>
+          <article class="cmt">
+            <div class="who"><span class="av">桥</span><b>桥下数马</b><time datetime="2026-11-05">11月5日</time></div>
+            <p>战力表 v4.2 还是没给综合分，理解，但读者要横向比较很费劲。起速和冷却能拉平看吗？至少给个区间吧。</p>
+            <div class="stars">★★★☆☆</div>
+          </article>
+          <article class="cmt">
+            <div class="who"><span class="av">乌</span><b>乌勒的拓片</b><time datetime="2026-11-04">11月4日</time></div>
+            <p>门楣拓片 42 厘米、存档 36 厘米这个差 6 厘米的细节，我放大第33章插图看了，真能看出来。字序颠倒这件事证据链是完整的，但说“挪用”我觉得跳太快。</p>
+            <div class="stars">★★★★☆</div>
+          </article>
+          <article class="cmt">
+            <div class="who"><span class="av">厩</span><b>旧厩守夜人</b><time datetime="2026-11-02">11月2日</time></div>
+            <p>第六席空到第37章还不补，正文一句“暂缺”就完了。读者追这条线追了八章，作者是不是自己也没想好谁来接。</p>
+            <div class="stars">★★☆☆☆</div>
+          </article>
+          <article class="cmt">
+            <div class="who"><span class="av">路</span><b>断栏坡常客</b><time datetime="2026-10-30">10月30日</time></div>
+            <p>按实测路线走了断栏坡，坡度和“铁蹄打滑”的描述基本一致。南渡口确实没了，2021 年填的，路牌还在。这条投稿帮了大忙。</p>
+            <div class="stars">★★★★★</div>
+          </article>
+          <article class="cmt">
+            <div class="who"><span class="av">丙</span><b>丙午一号牌</b><time datetime="2026-10-26">10月26日</time></div>
+            <p>听证纪要录得挺全，但岑牧那六段发言里有两段是转述，不是原话，希望标一下。不然拿去引用会出问题。</p>
+            <div class="stars">★★★☆☆</div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 相关资讯 -->
+      <section class="sec" id="news" aria-labelledby="nw-h">
+        <div class="sec-head">
+          <h2 id="nw-h">相关资讯：近一个月的时间线</h2>
+          <span class="hint">5 条</span>
+        </div>
+        <ul class="newslist">
+          <li><time datetime="2026-11-06">11月6日</time><a href="/#updates">第37章「铁蹄过桥」连载，附录补入丙午换发进度</a><span class="src">连载</span></li>
+          <li><time datetime="2026-11-03">11月3日</time><a href="/#picks">角色谱系图第14版，旧厩帐师承线补全</a><span class="src">档案</span></li>
+          <li><time datetime="2026-10-30">10月30日</time><a href="/#faq">误读澄清新增第9条，区分桥面人数与通行总量</a><span class="src">澄清</span></li>
+          <li><time datetime="2026-10-24">10月24日</time><a href="/#guide">读者实测档案第6份收录，南渡口坐标确认已填埋</a><span class="src">投稿</span></li>
+          <li><time datetime="2026-10-18">10月18日</time><a href="/#deep">马政署听证纪要全文录入，六段发言含两段转述</a><span class="src">纪要</span></li>
+        </ul>
+      </section>
+
+      <!-- 相关推荐 -->
+      <section class="sec" id="related" aria-labelledby="rl-h">
+        <div class="sec-head">
+          <h2 id="rl-h">相关推荐：接着往下看的四条线</h2>
+          <span class="hint">标签索引</span>
+        </div>
+        <ul class="tagindex">
+          <li><a href="/#deep">桥权双轨说证据链</a></li>
+          <li><a href="/#picks">半人马铁蹄三帐迁徙路线</a></li>
+          <li><a href="/#guide">缰环口令代签有效期争议</a></li>
+          <li><a href="/#voices">七骑第六席候选人待定名单</a></li>
+          <li><a href="/#faq">丙午竹牌横纹辨认方法</a></li>
+          <li><a href="/#news">10月18日听证会现场提问记录</a></li>
+        </ul>
+      </section>
+
+      <!-- 补充板块 榜单 -->
+      <section class="sec" id="rank" aria-labelledby="rk-h">
+        <div class="sec-head">
+          <h2 id="rk-h">章节耐读榜：按重读次数排</h2>
+          <span class="hint">读者票选 · 10月下旬</span>
+        </div>
+        <ol class="rank">
+          <li><b>第33章「不过夜桥」</b> 乌勒对质，拓片字序成焦点<span>重读 218 次</span></li>
+          <li><b>第22章「八骑为限」</b> 注脚被删的关键一页<span>重读 174 次</span></li>
+          <li><b>第37章「铁蹄过桥」</b> 旧批次竹牌卡住补给车<span>重读 151 次</span></li>
+          <li><b>第9章「初引誓词」</b> 来源注脚尚在的版本<span>重读 96 次</span></li>
+          <li><b>第29章「第六席暂缺」</b> 临时授权出场<span>重读 88 次</span></li>
+        </ol>
+      </section>
+
+      <!-- 引语卡 / 创作者证言 -->
+      <section class="sec" id="quotes" aria-labelledby="qt-h">
+        <div class="sec-head">
+          <h2 id="qt-h">创作者侧记：三句话说明写作取舍</h2>
+          <span class="hint">引语卡</span>
+        </div>
+        <div class="quotes">
+          <blockquote class="quote-card">
+            <p>“桥权写成制度之争，是因为两个实物拓片尺寸不同，读者能拿尺子去比。”</p>
+            <cite>—— 连载方 · 2026年10月30日答复</cite>
+          </blockquote>
+          <blockquote class="quote-card">
+            <p>“第六席先空着，等过桥帐的竹牌换完再定人选，否则写谁接都会提前泄露方向。”</p>
+            <cite>—— 连载方 · 2026年11月3日谱系图注</cite>
+          </blockquote>
+          <blockquote class="quote-card">
+            <p>“战力表坚持不给综合分。三项量纲不同，加了总分反而看不出第37章那 40 秒。”</p>
+            <cite>—— 连载方 · 2026年11月6日附录</cite>
+          </blockquote>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- 侧栏 -->
+    <aside class="sidebar" aria-label="页面内导航与速查">
+      <div class="side-card">
+        <h3>本页导航</h3>
+        <ul id="sidenav">
+          <li><a href="/#overview">领域概览</a></li>
+          <li><a href="/#picks">精选内容推荐</a></li>
+          <li><a href="/#updates">最新更新</a></li>
+          <li><a href="/#channels">分类入口</a></li>
+          <li><a href="/#deep">深度解析</a></li>
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#faq">常见疑问</a></li>
+          <li><a href="/#voices">读者评论</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#rank">章节耐读榜</a></li>
+        </ul>
+      </div>
+      <div class="side-card">
+        <h3>速查数字</h3>
+        <ul style="list-style:none;padding:0;margin:0;font-size:var(--fs-s);color:var(--ink-2)">
+          <li style="padding:4px 0;border-bottom:1px dashed var(--line)">竹牌总数：214 枚</li>
+          <li style="padding:4px 0;border-bottom:1px dashed var(--line)">已换发：187 枚</li>
+          <li style="padding:4px 0;border-bottom:1px dashed var(--line)">未换发：27 枚</li>
+          <li style="padding:4px 0;border-bottom:1px dashed var(--line)">桥面同时上限：8 骑</li>
+          <li style="padding:4px 0">拓片尺寸差：6 厘米</li>
+        </ul>
+      </div>
+      <div class="side-card">
+        <h3>投稿与参与</h3>
+        <p style="margin:0 0 8px;font-size:var(--fs-s);color:var(--ink-2)">路线实测、拓片比对、听证记录都收。写清坐标、年份和对照章节号即可。</p>
+        <a href="/#guide" style="font-size:var(--fs-s)">查看投稿要求 →</a>
+      </div>
+    </aside>
+
+  </div>
+</main>
+
+<footer id="footer">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <div class="fbrand">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#4b3169"/><path d="M32 10l4.6 12.8L49 27l-12.4 4.2L32 44l-4.6-12.8L15 27l12.4-4.2z" fill="#e8c87a"/></svg>
+          <strong>女王骑人马vk</strong>
+        </div>
+        <p class="fpos">把停战誓词、竹牌编号与桥面通行规则摆在一起看，细节比立场更能说明问题。</p>
+      </div>
+      <div>
+        <h4>读本</h4>
+        <ul>
+          <li><a href="/#overview">领域概览</a></li>
+          <li><a href="/#picks">精选内容推荐</a></li>
+          <li><a href="/#updates">最新更新</a></li>
+          <li><a href="/#deep">深度解析</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>查档</h4>
+        <ul>
+          <li><a href="/#channels">分类入口</a></li>
+          <li><a href="/#faq">常见疑问</a></li>
+          <li><a href="/#rank">章节耐读榜</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>参与</h4>
+        <ul>
+          <li><a href="/#guide">投稿要求</a></li>
+          <li><a href="/#voices">读者评论</a></li>
+          <li><a href="/#quotes">创作者侧记</a></li>
+          <li><a href="/#related">相关推荐</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fbottom">
+      <span>示例数据说明：页面中的时间、编号与人物均属虚构设定示例，仅用于展示栏目结构。</span>
+      <span class="upd">更新对应项：11月6日第37章、11月3日谱系图第14版、10月30日误读澄清第9条</span>
+      <span>© 2026 女王骑人马vk 设定档案馆</span>
+    </div>
+  </div>
+</footer>
+
+<button id="totop" type="button" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  var menubtn=document.getElementById('menubtn');
+  var mainnav=document.getElementById('mainnav');
+  if(menubtn&&mainnav){
+    menubtn.addEventListener('click',function(){
+      var open=mainnav.classList.toggle('open');
+      menubtn.setAttribute('aria-expanded',open?'true':'false');
+    });
+    mainnav.addEventListener('click',function(e){
+      if(e.target.tagName==='A'&&window.innerWidth<=640){
+        mainnav.classList.remove('open');
+        menubtn.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  var totop=document.getElementById('totop');
+  window.addEventListener('scroll',function(){
+    if(window.scrollY>420){totop.classList.add('on');}else{totop.classList.remove('on');}
+  },{passive:true});
+  totop.addEventListener('click',function(){
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+
+  /* 侧栏滚动高亮 */
+  var links=Array.prototype.slice.call(document.querySelectorAll('#sidenav a'));
+  var sections=links.map(function(a){
+    return document.querySelector(a.getAttribute('href').replace('/#','#'));
+  }).filter(Boolean);
+  function syncNav(){
+    var pos=window.scrollY+140,idx=-1;
+    sections.forEach(function(s,i){ if(s.offsetTop<=pos) idx=i; });
+    links.forEach(function(a,i){ a.classList.toggle('active',i===idx); });
+  }
+  window.addEventListener('scroll',syncNav,{passive:true});
+  window.addEventListener('resize',syncNav);
+  syncNav();
+
+  /* 本地搜索 */
+  var q=document.getElementById('q');
+  var btn=document.getElementById('searchbtn');
+  var state=document.getElementById('searchstate');
+  var blocks=Array.prototype.slice.call(document.querySelectorAll('main article, main li, main .ov-item, main details.faq'));
+  function doSearch(){
+    var kw=(q.value||'').trim().toLowerCase();
+    blocks.forEach(function(b){ b.style.outline=''; b.style.background=''; });
+    if(!kw){ state.classList.remove('on'); state.textContent=''; return; }
+    var hit=null;
+    blocks.forEach(function(b){
+      if(!hit && b.textContent.toLowerCase().indexOf(kw)>-1){
+        hit=b;
+      }
+    });
+    if(hit){
+      hit.style.outline='2px solid #b8892f';
+      hit.style.background='#fbf5e6';
+      state.classList.add('on');
+      state.textContent='已定位到：'+hit.textContent.replace(/\s+/g,' ').trim().slice(0,32)+'…';
+      hit.scrollIntoView({behavior:'smooth',block:'center'});
+    }else{
+      state.classList.add('on');
+      state.textContent='没有找到包含“'+q.value.trim()+'”的角色、章节或设定，换个词试试，比如“竹牌”“缰环”“铁蹄”。';
+    }
+  }
+  btn.addEventListener('click',doSearch);
+  q.addEventListener('keydown',function(e){ if(e.key==='Enter'){ e.preventDefault(); doSearch(); } });
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"女王骑人马vk",
+  "description":"聚焦都市奇幻设定的阅读与考据站点，整理角色谱系、战力对照、章节索引与读者实测。",
+  "inLanguage":"zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"丙午竹牌和旧批次竹牌有什么区别？","acceptedAnswer":{"@type":"Answer","text":"丙午是2026年换发批次的年号刻记，牌面多一道横纹；旧批次无横纹，编号按旧序。第37章被拦的补给车挂的是旧批次，所以缰环口令读不出来。截至11月6日，214枚中已换187枚。"}},
+    {"@type":"Question","name":"缰环口令到底由谁签发？","acceptedAnswer":{"@type":"Answer","text":"由巡夜队当值骑手签发，签发记录附在每章附录。第29章第六席空缺后改由临时授权人代签，代签有效期原文没写。"}},
+    {"@type":"Question","name":"“八骑为限”是指总共只能过八骑吗？","acceptedAnswer":{"@type":"Answer","text":"不是累计。10月18日听证纪要第4段把“八骑”解释为同一时刻桥面人数上限，与通行总量无关。"}},
+    {"@type":"Question","name":"铁蹄三帐里哪一帐最难打交道？","acceptedAnswer":{"@type":"Answer","text":"过桥帐。该帐27枚竹牌未换发中的多数集中于此，且第33章对质时长老未到场。"}},
+    {"@type":"Question","name":"第29章之后第六席为什么一直空着？","acceptedAnswer":{"@type":"Answer","text":"正文只写“暂缺”，没给理由。谱系图第14版把三位候选人都标成待定，其中一位出自过桥帐。"}},
+    {"@type":"Question","name":"旧城区巡夜路线能实地走吗？","acceptedAnswer":{"@type":"Answer","text":"三段里有两段可走，南渡口在2021年填埋，只剩路名。读者「夜行灯」的实测档案标了14张现场照。"}},
+    {"@type":"Question","name":"战力对照表为什么不给综合分？","acceptedAnswer":{"@type":"Answer","text":"三项指标量纲不同：起速用秒，桥面停留用秒，缰环冷却用分钟。强行加总会掩盖冷却差。"}},
+    {"@type":"Question","name":"1998年门楣拓片的字序争议有定论吗？","acceptedAnswer":{"@type":"Answer","text":"没有。拓片本身在，字序读作“不过夜桥”；马政署存档的同名文书拓片窄6厘米，字序读作“桥不过夜”。第33章只呈现，没裁定。"}},
+    {"@type":"Question","name":"读者实测档案怎么投稿？","acceptedAnswer":{"@type":"Answer","text":"投稿入口在页尾“参与”分组。要求写清坐标、年份、对照的章节号，附现场照。目前收录6份。"}}
+  ]
+}
+</script>
+</body>
+        </html>
