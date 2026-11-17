@@ -1,0 +1,948 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>飞魔幻小说网-玄幻奇幻在线阅读排行榜</title>
+<meta name="description" content="飞魔幻小说网汇集东方玄幻、异世魔幻、仙侠修真与热血升级类长篇小说，按追读热度排序更新。提供新书速递、完结书库、章节试读、书单合集与读者书评，帮你在海量书目里快速找到合口味的连载与完本作品。">
+<meta name="keywords" content="飞魔幻小说网">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23221a33'/%3E%3Cpath d='M14 44 L28 16 L36 30 L44 20 L52 44 Z' fill='%23e0a53c'/%3E%3Ccircle cx='45' cy='17' r='5' fill='%23c8506b'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "飞魔幻小说网",
+  "inLanguage": "zh-CN",
+  "description": "玄幻奇幻长篇小说在线阅读与排行站点，含东方玄幻、异世魔幻、仙侠修真、热血升级等频道。"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "异世魔幻和东方玄幻在设定上怎么区分",
+      "acceptedAnswer": {"@type": "Answer", "text": "异世魔幻通常有独立的地理与种族体系，如《裂空纪》的浮岛十二域；东方玄幻多借用修真、宗门、灵根等词汇，力量体系围绕境界层级展开。"}
+    },
+    {
+      "@type": "Question",
+      "name": "连载书断更了还能追吗",
+      "acceptedAnswer": {"@type": "Answer", "text": "先看书目页的更新记录。若最近一次更新距今超过 60 天，多数读者会转去同作者的完本作品，等复更后再补。"}
+    },
+    {
+      "@type": "Question",
+      "name": "仙侠修真类新书怎么判断值不值得入坑",
+      "acceptedAnswer": {"@type": "Answer", "text": "看前三十章的境界推进节奏和宗门副本数量。三十章内出现两个以上独立宗门任务线、且主角境界有明确跨越的，通常有完整大纲。"}
+    },
+    {
+      "@type": "Question",
+      "name": "章节试读要不要注册账号",
+      "acceptedAnswer": {"@type": "Answer", "text": "前五章公开试读无需登录，第六十章之后的部分需要书友账号，收藏与书评也依赖账号同步。"}
+    },
+    {
+      "@type": "Question",
+      "name": "热血升级流的战力数值为什么容易崩",
+      "acceptedAnswer": {"@type": "Answer", "text": "早期用低阶境界做筛选，后期同阶对手密度上升，若作者不设战力上限与代价机制，就会出现越级秒杀，读者俗称数值通胀。"}
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --ink:#1c1626;
+  --ink-2:#3c3350;
+  --ink-3:#6a5f7d;
+  --paper:#f7f3ec;
+  --paper-2:#ffffff;
+  --line:#ddd3c4;
+  --brand:#221a33;
+  --brand-2:#3a2d55;
+  --gold:#c98a2a;
+  --gold-soft:#f2e2c2;
+  --rose:#b23f5a;
+  --rose-soft:#f7e4e8;
+  --jade:#2f6b5e;
+  --jade-soft:#e2efe9;
+  --shadow:0 1px 2px rgba(28,22,38,.06),0 8px 24px -12px rgba(28,22,38,.28);
+  --radius:10px;
+  --radius-s:6px;
+  --gap:20px;
+  --font:"Songti SC","Noto Serif SC",Georgia,"Source Han Serif SC",serif;
+  --font-ui:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  --anchor:104px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--font-ui);
+  font-size:16px;
+  line-height:1.85;
+  -webkit-text-size-adjust:100%;
+}
+img{max-width:100%;display:block}
+a{color:var(--brand-2);text-decoration:none}
+a:hover{color:var(--rose)}
+h1,h2,h3,h4{font-family:var(--font);line-height:1.35;margin:0 0 .5em}
+p{margin:0 0 1em}
+ul,ol{margin:0 0 1em;padding-left:1.3em}
+section[id],article[id],div[id]{scroll-margin-top:var(--anchor)}
+.skip{position:absolute;left:-9999px;top:0;background:var(--brand);color:#fff;padding:8px 14px;z-index:99}
+.skip:focus{left:8px;top:8px}
+
+/* 顶部固定区 */
+.sticky-wrap{position:sticky;top:0;z-index:50}
+.notice{
+  background:var(--brand);color:#f3ecdd;
+  font-size:13.5px;line-height:1.6;
+  padding:9px 18px;
+  display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;justify-content:center;
+  border-bottom:1px solid rgba(255,255,255,.12);
+}
+.notice b{color:var(--gold-soft);font-weight:600}
+.notice .dot{opacity:.4}
+.notice a{color:#ffdca8;text-decoration:underline;text-underline-offset:3px}
+
+header.site{
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+  box-shadow:0 2px 10px -8px rgba(28,22,38,.5);
+}
+.hdr{max-width:1180px;margin:0 auto;padding:10px 18px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--font);font-size:19px;font-weight:700;color:var(--brand);white-space:nowrap}
+.brand svg{width:34px;height:34px;flex:none}
+.nav-toggle{
+  display:none;margin-left:auto;
+  background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius-s);
+  padding:7px 12px;font-size:14px;color:var(--ink);cursor:pointer;font-family:var(--font-ui);
+}
+.nav-toggle:focus-visible,.hdr a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.topnav{display:flex;gap:4px;flex-wrap:wrap;margin-left:4px}
+.topnav a{font-size:14px;padding:6px 10px;border-radius:var(--radius-s);color:var(--ink-2)}
+.topnav a:hover{background:var(--gold-soft);color:var(--brand)}
+.hdr-tools{display:flex;gap:10px;align-items:center;margin-left:auto}
+.search{display:flex;align-items:center;gap:6px;background:var(--paper-2);border:1px solid var(--line);border-radius:999px;padding:4px 6px 4px 14px}
+.search input{border:0;background:transparent;font-family:var(--font-ui);font-size:14px;width:150px;padding:5px 0;color:var(--ink)}
+.search input:focus{outline:none}
+.search button{border:0;background:var(--brand);color:#fff;border-radius:999px;padding:5px 14px;font-size:13.5px;font-family:var(--font-ui);cursor:pointer}
+.btn-ghost{border:1px solid var(--line);background:var(--paper-2);border-radius:999px;padding:6px 14px;font-size:14px;color:var(--ink-2);white-space:nowrap}
+
+/* 首屏 */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(1100px 420px at 82% -10%,rgba(178,63,90,.22),transparent 62%),
+    radial-gradient(800px 380px at 8% 110%,rgba(201,138,42,.20),transparent 60%),
+    linear-gradient(160deg,#241c36 0%,#2c2142 48%,#1b1528 100%);
+  color:#f2ece2;
+}
+.hero-inner{max-width:1180px;margin:0 auto;padding:56px 18px 46px;display:grid;grid-template-columns:1.15fr .85fr;gap:38px;align-items:center}
+.eyebrow{font-size:13px;letter-spacing:.18em;color:#e5b96c;margin-bottom:14px;font-family:var(--font-ui)}
+.hero h1{font-size:clamp(30px,5vw,46px);color:#fff;margin:0 0 16px;letter-spacing:.02em}
+.hero h1 span{color:#f0bf6a}
+.hero p.lead{font-size:16.5px;color:#ddd3c6;max-width:34em;margin-bottom:22px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px}
+.cta{display:inline-block;padding:11px 22px;border-radius:999px;font-size:15px;font-family:var(--font-ui);font-weight:600}
+.cta-main{background:var(--gold);color:#241c36}
+.cta-main:hover{background:#e0a53c;color:#241c36}
+.cta-sub{border:1px solid rgba(255,255,255,.34);color:#f2ece2}
+.cta-sub:hover{border-color:#f0bf6a;color:#f0bf6a}
+.hero-stats{display:flex;gap:26px;flex-wrap:wrap;font-size:13.5px;color:#bfb3a5}
+.hero-stats strong{display:block;font-family:var(--font);font-size:21px;color:#f0bf6a;line-height:1.3}
+.hero-art{position:relative;min-height:280px}
+.hero-art svg{width:100%;height:auto;display:block;filter:drop-shadow(0 14px 30px rgba(0,0,0,.4))}
+.hero-badge{
+  position:absolute;right:2%;bottom:4%;
+  background:rgba(255,255,255,.1);border:1px solid rgba(240,191,106,.5);
+  color:#f6e6c8;font-size:12.5px;padding:6px 12px;border-radius:999px;backdrop-filter:blur(4px);
+}
+
+/* 布局 */
+.wrap{max-width:1180px;margin:0 auto;padding:0 18px}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 288px;gap:34px;padding:38px 0 20px;align-items:start}
+.main-col{min-width:0}
+.side-col{position:sticky;top:calc(var(--anchor) + 12px)}
+.sec{margin-bottom:44px}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;flex-wrap:wrap;border-bottom:2px solid var(--brand);padding-bottom:8px;margin-bottom:18px}
+.sec-head h2{font-size:22px;margin:0}
+.sec-head .meta{font-size:13px;color:var(--ink-3)}
+.sec-head .more{font-size:13.5px;white-space:nowrap}
+.kicker{font-size:12.5px;color:var(--rose);letter-spacing:.1em;display:block;margin-bottom:4px;font-family:var(--font-ui)}
+
+/* 概览 */
+.overview-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.ov-card{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px}
+.ov-card h3{font-size:14.5px;margin:0 0 6px;color:var(--brand)}
+.ov-card p{font-size:13.5px;color:var(--ink-3);margin:0;line-height:1.7}
+.ov-card strong{font-family:var(--font);font-size:20px;color:var(--rose);display:block;margin-bottom:2px}
+
+/* 精选卡片 */
+.picks{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.pick{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:transform .18s ease,box-shadow .18s ease}
+.pick:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.pick img{width:100%;height:132px;object-fit:cover;background:#e6ded2}
+.pick-body{padding:13px 15px 15px;display:flex;flex-direction:column;gap:7px;flex:1}
+.pick-body h3{font-size:15.5px;margin:0;line-height:1.5}
+.tags{display:flex;gap:6px;flex-wrap:wrap}
+.tag{font-size:11.5px;padding:2px 8px;border-radius:999px;background:var(--jade-soft);color:var(--jade);font-family:var(--font-ui)}
+.tag.gold{background:var(--gold-soft);color:#8a5b11}
+.tag.rose{background:var(--rose-soft);color:var(--rose)}
+.pick-body p{font-size:13px;color:var(--ink-3);margin:0;line-height:1.72}
+.pick-foot{margin-top:auto;font-size:12.5px;color:var(--ink-3);display:flex;justify-content:space-between;gap:8px;padding-top:6px;border-top:1px dashed var(--line)}
+
+/* 更新列表 */
+.update-list{list-style:none;padding:0;margin:0;background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.update-list li{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:baseline;padding:11px 16px;border-bottom:1px solid #eee7dc;font-size:14px}
+.update-list li:last-child{border-bottom:0}
+.update-list .ch{font-size:12px;color:var(--gold);background:var(--gold-soft);padding:1px 8px;border-radius:999px;white-space:nowrap}
+.update-list .t{font-size:12.5px;color:var(--ink-3);white-space:nowrap}
+.update-list a{font-weight:600}
+
+/* 分类入口标签索引 */
+.cat-index{display:flex;flex-wrap:wrap;gap:10px}
+.cat-index a{background:var(--paper-2);border:1px solid var(--line);border-radius:999px;padding:7px 15px;font-size:14px;color:var(--ink-2);display:inline-flex;gap:7px;align-items:center}
+.cat-index a span{font-size:12px;color:var(--ink-3)}
+.cat-index a:hover{border-color:var(--gold);color:var(--brand);background:var(--gold-soft)}
+
+/* 深度解析 */
+.feature{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);padding:26px 28px;box-shadow:var(--shadow)}
+.feature h2{font-size:23px;margin-bottom:6px;border:0;padding:0}
+.feature .byline{font-size:13px;color:var(--ink-3);margin-bottom:18px}
+.feature h3{font-size:17px;margin:26px 0 8px;color:var(--brand);padding-left:12px;border-left:4px solid var(--gold)}
+.feature p{font-size:15px;line-height:1.9;color:var(--ink-2)}
+.feature .verdict{background:var(--gold-soft);border-left:4px solid var(--gold);padding:13px 16px;border-radius:0 var(--radius-s) var(--radius-s) 0;font-size:14.5px;margin:16px 0;color:#5b4110}
+.feature blockquote{margin:18px 0;padding:12px 18px;border-left:3px solid var(--rose);background:var(--rose-soft);font-size:14.5px;color:#6b2233;border-radius:0 var(--radius-s) var(--radius-s) 0}
+table.cmp{width:100%;border-collapse:collapse;font-size:13.5px;margin:14px 0 6px}
+table.cmp th,table.cmp td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+table.cmp th{background:#f1ebdf;font-weight:600;font-family:var(--font-ui)}
+table.cmp caption{caption-side:top;text-align:left;font-size:12.5px;color:var(--ink-3);padding-bottom:6px}
+
+/* 体验指南步骤 */
+.steps{counter-reset:st;list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.steps li{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px 14px 52px;position:relative}
+.steps li::before{counter-increment:st;content:counter(st,decimal-leading-zero);position:absolute;left:15px;top:15px;font-family:var(--font);font-size:19px;color:var(--gold);font-weight:700}
+.steps h3{font-size:14.8px;margin:0 0 5px}
+.steps p{font-size:13.3px;color:var(--ink-3);margin:0;line-height:1.75}
+
+/* FAQ */
+.faq details{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);margin-bottom:10px;padding:0 16px}
+.faq summary{cursor:pointer;padding:13px 4px;font-size:15px;font-weight:600;color:var(--brand);list-style:none;position:relative;padding-right:28px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:2px;top:11px;font-size:19px;color:var(--gold);font-weight:400}
+.faq details[open] summary::after{content:"–"}
+.faq details p{font-size:14px;color:var(--ink-2);margin:0 0 14px;padding-right:6px}
+
+/* 评论 */
+.comments{display:grid;gap:12px}
+.cmt{background:var(--paper-2);border:1px solid var(--line);border-left:3px solid var(--jade);border-radius:var(--radius-s);padding:13px 16px}
+.cmt.neg{border-left-color:var(--rose)}
+.cmt.neu{border-left-color:#9a8fb0}
+.cmt-head{display:flex;gap:10px;align-items:baseline;font-size:12.5px;color:var(--ink-3);margin-bottom:5px;flex-wrap:wrap}
+.cmt-head b{color:var(--brand);font-size:13.5px}
+.cmt p{font-size:14px;margin:0;color:var(--ink-2);line-height:1.78}
+
+/* 资讯 */
+.news-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.news-item{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px}
+.news-item time{font-size:12px;color:var(--rose)}
+.news-item h3{font-size:15px;margin:4px 0 6px}
+.news-item p{font-size:13.2px;color:var(--ink-3);margin:0}
+
+/* 相关推荐 */
+.rel{display:flex;flex-wrap:wrap;gap:9px}
+.rel a{border:1px dashed var(--line);border-radius:var(--radius-s);padding:6px 12px;font-size:13.5px;color:var(--ink-2);background:var(--paper-2)}
+.rel a:hover{border-style:solid;border-color:var(--gold);color:var(--brand)}
+
+/* 榜单 */
+.rank{list-style:none;padding:0;margin:0;counter-reset:rk;background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.rank li{counter-increment:rk;display:grid;grid-template-columns:34px 1fr auto;gap:10px;padding:11px 16px;border-bottom:1px solid #eee7dc;font-size:14px;align-items:baseline}
+.rank li:last-child{border-bottom:0}
+.rank li::before{content:counter(rk);font-family:var(--font);font-size:17px;color:var(--ink-3);text-align:center}
+.rank li:nth-child(-n+3)::before{color:var(--rose);font-weight:700}
+.rank .score{font-size:12.5px;color:var(--gold);white-space:nowrap}
+
+/* 侧栏 */
+.side-card{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;margin-bottom:18px}
+.side-card h2{font-size:15.5px;margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.side-nav{list-style:none;padding:0;margin:0;font-size:13.6px}
+.side-nav li{margin-bottom:2px}
+.side-nav a{display:block;padding:5px 10px;border-radius:var(--radius-s);color:var(--ink-2);border-left:3px solid transparent}
+.side-nav a:hover{background:#f3ecdf}
+.side-nav a.active{background:var(--gold-soft);color:var(--brand);border-left-color:var(--gold);font-weight:600}
+.side-list{list-style:none;padding:0;margin:0;font-size:13.4px}
+.side-list li{display:flex;gap:8px;justify-content:space-between;padding:6px 0;border-bottom:1px dashed #e9e1d4}
+.side-list li:last-child{border-bottom:0}
+.side-list span{color:var(--ink-3);font-size:12px;white-space:nowrap}
+.side-note{font-size:12.5px;color:var(--ink-3);line-height:1.75}
+.side-card .rel a{font-size:12.8px;padding:5px 10px}
+
+/* 搜索反馈 */
+#search-feedback{display:none;font-size:13px;color:var(--rose);background:var(--rose-soft);border:1px solid #e6c3cb;border-radius:var(--radius-s);padding:8px 14px;margin:14px 0 0}
+
+/* 回顶 */
+#toTop{
+  position:fixed;right:18px;bottom:22px;z-index:60;
+  width:44px;height:44px;border-radius:50%;border:1px solid var(--line);
+  background:var(--brand);color:#f0bf6a;font-size:18px;cursor:pointer;
+  display:none;align-items:center;justify-content:center;box-shadow:var(--shadow);
+}
+#toTop.show{display:flex}
+
+/* 页脚 */
+footer.site{background:var(--brand);color:#cdc3b4;margin-top:20px;font-size:13.5px}
+.foot-inner{max-width:1180px;margin:0 auto;padding:40px 18px 26px}
+.foot-top{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:26px;margin-bottom:28px}
+.foot-brand{display:flex;align-items:center;gap:10px;font-family:var(--font);font-size:18px;color:#f6ecdb;margin-bottom:10px}
+.foot-brand svg{width:30px;height:30px}
+.foot-inner h3{font-size:14px;color:#f0bf6a;margin:0 0 10px;font-family:var(--font-ui);letter-spacing:.06em}
+.foot-inner ul{list-style:none;padding:0;margin:0}
+.foot-inner li{margin-bottom:6px}
+.foot-inner a{color:#cdc3b4}
+.foot-inner a:hover{color:#f0bf6a}
+.foot-pos{font-size:13px;color:#a99e90;line-height:1.8;max-width:30em}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:16px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.5px;color:#9b9082}
+.foot-bottom .sample{max-width:52em}
+
+@media (max-width:960px){
+  :root{--anchor:96px}
+  .hero-inner{grid-template-columns:1fr;padding:42px 18px 34px}
+  .hero-art{max-width:420px}
+  .layout{grid-template-columns:1fr}
+  .side-col{position:static;order:2}
+  .picks{grid-template-columns:repeat(2,1fr)}
+  .overview-grid{grid-template-columns:repeat(2,1fr)}
+  .news-grid{grid-template-columns:1fr}
+  .foot-top{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  .search input{width:118px}
+  .topnav{display:none;width:100%;margin-left:0;border-top:1px solid var(--line);padding-top:6px;gap:2px}
+  .topnav.open{display:flex}
+  .nav-toggle{display:inline-block}
+  .hdr-tools{margin-left:0;order:3;width:100%;justify-content:space-between;padding-bottom:4px}
+  .steps{grid-template-columns:1fr}
+}
+@media (max-width:520px){
+  .picks{grid-template-columns:1fr}
+  .overview-grid{grid-template-columns:1fr}
+  .update-list li{grid-template-columns:1fr auto}
+  .update-list .ch{display:none}
+  .feature{padding:18px 16px}
+  .foot-top{grid-template-columns:1fr}
+  .brand{font-size:17px}
+  .search{flex:1}
+  .search input{width:100%}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+  .pick:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主内容</a>
+
+<div class="sticky-wrap">
+  <div class="notice" id="notice">
+    <span><b>飞魔幻小说网</b> · 11月8日更新</span>
+    <span class="dot">|</span>
+    <span>《裂空纪》第三卷「浮岛断链」已上架 12 章</span>
+    <span class="dot">|</span>
+    <span>完本书库新增 9 本，<a href="/#updates">查看今日更新清单</a></span>
+  </div>
+  <header class="site">
+    <div class="hdr">
+      <a class="brand" href="/#hero" aria-label="飞魔幻小说网首页">
+        <svg viewBox="0 0 64 64" role="img" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#221a33"/>
+          <path d="M14 44 L28 16 L36 30 L44 20 L52 44 Z" fill="#e0a53c"/>
+          <circle cx="45" cy="17" r="5" fill="#c8506b"/>
+          <path d="M16 48 H48" stroke="#6a5f7d" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span>飞魔幻小说网</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="topnav">频道菜单</button>
+      <nav class="topnav" id="topnav" aria-label="主题频道">
+        <a href="/#overview">领域概览</a>
+        <a href="/#picks">编辑精选</a>
+        <a href="/#updates">更新速递</a>
+        <a href="/#cats">分类索引</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#guide">入坑指南</a>
+        <a href="/#faq">常见问答</a>
+        <a href="/#reviews">读者书评</a>
+        <a href="/#news">行业动态</a>
+        <a href="/#rank">追读榜</a>
+      </nav>
+      <div class="hdr-tools">
+        <form class="search" id="searchForm" role="search">
+          <label for="q" class="skip">站内查找书名</label>
+          <input id="q" name="q" type="search" placeholder="搜书名、作者、流派" autocomplete="off">
+          <button type="submit">查找</button>
+        </form>
+        <a class="btn-ghost" href="/#guide">新书试读</a>
+      </div>
+    </div>
+  </header>
+</div>
+
+<div class="hero" id="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">东方玄幻 · 异世魔幻 · 仙侠修真</div>
+      <h1>飞魔幻小说网</h1>
+      <p class="lead">这里摆着 2026 年 11 月还在连载的 1 124 本长篇：东方玄幻的宗门争锋、异世魔幻的浮岛航线、仙侠修真的境界阶梯，按追读人数与更新稳定度排进书架。挑一本，从第一章读到今日更新。</p>
+      <div class="hero-actions">
+        <a class="cta cta-main" href="/#picks">看编辑本周选中</a>
+        <a class="cta cta-sub" href="/#rank">打开追读榜</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>1 124</strong>部连载/完本</div>
+        <div><strong>9 个</strong>常驻频道</div>
+        <div><strong>10-08</strong>至 11-08 更新</div>
+        <div><strong>318 条</strong>读者长评</div>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 420 340" role="presentation">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#3d2f5c"/>
+            <stop offset="1" stop-color="#241d36"/>
+          </linearGradient>
+          <linearGradient id="island" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#d3922f"/>
+            <stop offset="1" stop-color="#8a5b1b"/>
+          </linearGradient>
+        </defs>
+        <rect x="0" y="0" width="420" height="340" rx="18" fill="url(#sky)"/>
+        <circle cx="318" cy="72" r="34" fill="#f0bf6a" opacity=".85"/>
+        <circle cx="318" cy="72" r="52" fill="none" stroke="#f0bf6a" stroke-opacity=".35" stroke-width="1.5"/>
+        <g opacity=".65" fill="#ece3d2">
+          <circle cx="62" cy="46" r="1.8"/><circle cx="118" cy="30" r="1.4"/><circle cx="196" cy="58" r="2"/>
+          <circle cx="88" cy="96" r="1.3"/><circle cx="356" cy="132" r="1.6"/><circle cx="252" cy="26" r="1.2"/>
+        </g>
+        <path d="M60 236 L118 176 L182 236 Z" fill="#5a4a7c" opacity=".8"/>
+        <path d="M148 246 L214 168 L286 246 Z" fill="#4a3c68" opacity=".9"/>
+        <path d="M232 250 L300 196 L372 250 Z" fill="#3f3358"/>
+        <path d="M104 250 Q210 226 316 250 L316 268 Q210 244 104 268 Z" fill="url(#island)"/>
+        <path d="M150 226 L170 226 L176 206 L158 214 L188 200 L176 226 L196 232 L160 240 Z" fill="#2f2745"/>
+        <g stroke="#f0bf6a" stroke-width="2" fill="none" opacity=".9">
+          <path d="M40 300 Q110 276 176 300 T320 300"/>
+          <path d="M52 314 Q120 292 190 314 T338 312"/>
+        </g>
+        <path d="M20 268 Q60 252 96 268" stroke="#c8506b" stroke-width="2" fill="none" opacity=".7"/>
+      </svg>
+      <span class="hero-badge">浮岛航线 · 第三卷视觉</span>
+    </div>
+  </div>
+</div>
+
+<main id="main" class="wrap">
+  <div class="layout">
+    <div class="main-col">
+
+      <section class="sec" id="overview">
+        <div class="sec-head">
+          <div><span class="kicker">领域概览</span><h2>玄幻奇幻网文现在分成哪几类</h2></div>
+          <a class="more" href="/#cats">按类型进书库</a>
+        </div>
+        <p>2026 年秋季的书目结构比三年前更碎：东方玄幻仍是体量最大的一块，但异世魔幻靠“浮岛 + 航线”设定在近半年抬头，仙侠修真则稳定占据完结率最高的一档。下面四个数字来自站内书目统计，统计口径为 10 月 8 日至 11 月 8 日有更新的作品。</p>
+        <div class="overview-grid">
+          <div class="ov-card">
+            <strong>486 部</strong>
+            <h3>东方玄幻</h3>
+            <p>宗门、灵根、体修、血脉四条主线。近半月新增 61 部，主角开篇多为废脉或旁支。</p>
+          </div>
+          <div class="ov-card">
+            <strong>274 部</strong>
+            <h3>异世魔幻</h3>
+            <p>浮岛十二域、深渊裂口、契约兽三类设定集中。世界观名词多，前期进戏慢。</p>
+          </div>
+          <div class="ov-card">
+            <strong>203 部</strong>
+            <h3>仙侠修真</h3>
+            <p>完本比例 38%，全站最高。境界体系以练气到渡劫为主，读者看得懂、门槛低。</p>
+          </div>
+          <div class="ov-card">
+            <strong>161 部</strong>
+            <h3>热血升级</h3>
+            <p>单章字数偏短，日更 2 更居多。战力换算表是书评区最常见的争执点。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec" id="picks">
+        <div class="sec-head">
+          <div><span class="kicker">精选内容推荐</span><h2>编辑本周选中的六本</h2></div>
+          <span class="meta">截至 11 月 8 日</span>
+        </div>
+        <div class="picks">
+          <article class="pick">
+            <img src="https://picsum.photos/seed/feimohuan-liekong/640/360" width="640" height="360" loading="lazy" alt="浮岛断链书封构图，断裂的锁链悬在浮空岛之间">
+            <div class="pick-body">
+              <div class="tags"><span class="tag">异世魔幻</span><span class="tag gold">本周第一</span></div>
+              <h3>《裂空纪》第三卷：浮岛断链</h3>
+              <p>作者青隼，11 月 8 日更新至第 312 章。锁链断裂后，十二域航线重排，主角被推到主持调停的位置。</p>
+              <div class="pick-foot"><span>追读 4.2 万</span><span>日更 2 章</span></div>
+            </div>
+          </article>
+          <article class="pick">
+            <img src="https://picsum.photos/seed/feimohuan-chixiao/640/360" width="640" height="360" loading="lazy" alt="赤霄剑宗山门石阶与剑冢的插画构图">
+            <div class="pick-body">
+              <div class="tags"><span class="tag">东方玄幻</span></div>
+              <h3>《赤霄剑宗》</h3>
+              <p>作者白鹿眠。剑冢副本连写 43 章，评论区分成“写透派”和“拖节奏派”两拨，吵得很实在。</p>
+              <div class="pick-foot"><span>追读 3.6 万</span><span>11-07 更 1 章</span></div>
+            </div>
+          </article>
+          <article class="pick">
+            <img src="https://picsum.photos/seed/feimohuan-yanshan/640/360" width="640" height="360" loading="lazy" alt="雁山渡灵桥夜景，桥面浮着灯火">
+            <div class="pick-body">
+              <div class="tags"><span class="tag">仙侠修真</span><span class="tag gold">完本</span></div>
+              <h3>《雁山渡灵》</h3>
+              <p>作者半盏灯。全本 218 万字，10 月 26 日完结。渡灵人设定收束完整，番外补了三处伏笔。</p>
+              <div class="pick-foot"><span>完本评分 8.9</span><span>218 万字</span></div>
+            </div>
+          </article>
+          <article class="pick">
+            <img src="https://picsum.photos/seed/feimohuan-tieyu/640/360" width="640" height="360" loading="lazy" alt="铁狱擂台中央的锁甲战士与观众席">
+            <div class="pick-body">
+              <div class="tags"><span class="tag rose">热血升级</span></div>
+              <h3>《铁狱十三重》</h3>
+              <p>作者孤舟客。擂台越级战胜率被读者算到 27%，作者在第 188 章加了一段战力代价说明。</p>
+              <div class="pick-foot"><span>追读 2.9 万</span><span>11-08 更 2 章</span></div>
+            </div>
+          </article>
+          <article class="pick">
+            <img src="https://picsum.photos/seed/feimohuan-mohe/640/360" width="640" height="360" loading="lazy" alt="墨河城码头夜色，船灯倒映在水面">
+            <div class="pick-body">
+              <div class="tags"><span class="tag">异世魔幻</span><span class="tag">新书</span></div>
+              <h3>《墨河渡口》</h3>
+              <p>作者南窗雨，10 月 19 日开书。前 30 章把渡口规矩讲清楚，契约兽出场克制，不抢主角戏。</p>
+              <div class="pick-foot"><span>追读 1.1 万</span><span>已更 46 章</span></div>
+            </div>
+          </article>
+          <article class="pick">
+            <img src="https://picsum.photos/seed/feimohuan-lingxu/640/360" width="640" height="360" loading="lazy" alt="灵墟禁地石门与符纹阵纹俯视构图">
+            <div class="pick-body">
+              <div class="tags"><span class="tag">东方玄幻</span><span class="tag gold">慢热</span></div>
+              <h3>《灵墟禁地》</h3>
+              <p>作者陈砚秋。前 50 章全在铺垫禁地的符纹规则，第 51 章才给第一个大冲突，挑读者也挑耐心。</p>
+              <div class="pick-foot"><span>追读 8 500</span><span>11-06 更 1 章</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="sec" id="updates">
+        <div class="sec-head">
+          <div><span class="kicker">最新更新</span><h2>11 月 8 日章节更新清单</h2></div>
+          <span class="meta">共 37 本有更新</span>
+        </div>
+        <ul class="update-list">
+          <li><span class="ch">第 312 章</span><a href="/#picks">《裂空纪》</a><span class="t">今天 08:12</span></li>
+          <li><span class="ch">第 189 章</span><a href="/#picks">《铁狱十三重》</a><span class="t">今天 07:40</span></li>
+          <li><span class="ch">第 47 章</span><a href="/#picks">《墨河渡口》</a><span class="t">今天 09:05</span></li>
+          <li><span class="ch">第 233 章</span><a href="/#cats">《玄天铸骨》</a><span class="t">今天 06:58</span></li>
+          <li><span class="ch">第 96 章</span><a href="/#cats">《归墟灯录》</a><span class="t">昨天 22:31</span></li>
+          <li><span class="ch">第 158 章</span><a href="/#picks">《赤霄剑宗》</a><span class="t">昨天 21:14</span></li>
+          <li><span class="ch">第 61 章</span><a href="/#picks">《灵墟禁地》</a><span class="t">11 月 6 日 20:47</span></li>
+        </ul>
+      </section>
+
+      <section class="sec" id="cats">
+        <div class="sec-head">
+          <div><span class="kicker">分类入口</span><h2>按流派与场景进书库</h2></div>
+          <span class="meta">9 个常驻频道 + 标签索引</span>
+        </div>
+        <div class="cat-index">
+          <a href="/#picks">东方玄幻 <span>486</span></a>
+          <a href="/#picks">异世魔幻 <span>274</span></a>
+          <a href="/#picks">仙侠修真 <span>203</span></a>
+          <a href="/#picks">热血升级流 <span>161</span></a>
+          <a href="/#updates">宗门争锋 <span>198</span></a>
+          <a href="/#updates">浮岛航线 <span>77</span></a>
+          <a href="/#updates">契约兽养成 <span>92</span></a>
+          <a href="/#deep">战力体系对比 <span>56</span></a>
+          <a href="/#guide">完本完结书库 <span>431</span></a>
+          <a href="/#rank">追读榜前五十 <span>50</span></a>
+          <a href="/#reviews">读者长评 <span>318</span></a>
+          <a href="/#news">开书与完本动态 <span>86</span></a>
+        </div>
+      </section>
+
+      <section class="sec" id="deep">
+        <div class="feature">
+          <span class="kicker">深度解析</span>
+          <h2>浮岛设定正在改变异世魔幻的写法，但代价是前三十章更难读</h2>
+          <div class="byline">书目观察 · 样本 77 部浮岛航线作品 · 数据截至 2026 年 11 月 8 日</div>
+
+          <p>先摆结论：把世界观放在断裂的浮空岛与航线上的作品，中期留人能力比传统大陆设定强，但前三十章的弃书率也更高。这个判断可以被反驳——如果拿《墨河渡口》和《裂空纪》的追读曲线对照，会发现两部书走的是完全不同的路。</p>
+
+          <blockquote>《裂空纪》第三卷第 312 章原文提到“十二域锁链一断，航线便只剩三条可走”，这句话把地理限制直接变成剧情压力，也是浮岛设定最有用的一处。</blockquote>
+
+          <h3>一、两种设定的第 30 章数据对照</h3>
+          <p>随机抽 40 部浮岛设定作品与 40 部传统大陆设定作品，取各自第 30 章的追读留存。浮岛组平均留存 41.6%，大陆组 52.3%；但到第 90 章，浮岛组回升到 58.9%，大陆组为 55.1%。拐点集中在第 60 至 70 章，也就是航线第一次重排的节点。</p>
+          <table class="cmp">
+            <caption>第 30 / 90 章追读留存对照，样本各 40 部</caption>
+            <thead><tr><th>设定类型</th><th>第 30 章留存</th><th>第 90 章留存</th><th>常见弃书原因</th></tr></thead>
+            <tbody>
+              <tr><td>浮岛航线</td><td>41.6%</td><td>58.9%</td><td>地名与域名词汇密度过高</td></tr>
+              <tr><td>传统大陆</td><td>52.3%</td><td>55.1%</td><td>中期目标感弱化</td></tr>
+            </tbody>
+          </table>
+
+          <h3>二、航线规则先立后破，比境界升级更好核对</h3>
+          <p>《墨河渡口》的写法值得抄：前 12 章只做一件事，把渡口的三条规矩写清——夜渡必验灯、货不过夜、契约兽不离船。第 13 章开始，主角第一次违规，代价是丢了半枚渡牌。读者能拿这三条规矩回头核对每一次冲突是否成立，这比“境界压制”好判断得多。</p>
+          <p>反过来，《灵墟禁地》用符纹规则，第 50 章前几乎不给违规后果，只在第 51 章一次性倒出来。这种写法信息密度够，但缺少可提前验证的锚点，读者没法在评论区吵具体条目，只能吵“好不好看”。</p>
+
+          <h3>三、可被反驳的地方：留人回升未必来自设定</h3>
+          <p>需要说明：第 90 章留存回升，也可能是作者在 60 章后加了明确的阶段目标。11 月 3 日《裂空纪》书评区有个 800 字长评，作者青隼回复说“第三卷开始每一卷只走一条航线”。这条回复本身是转述，未经书内验证，但它指向的解释是：回升可能来自结构收紧，而非浮岛设定本身。事实与推测要分开看。</p>
+
+          <div class="verdict">可核对结论：如果你准备开浮岛设定的书，前 30 章至少把三条航线规矩连同违规代价写完。追踪这三点，比纠结世界观名词数量更有用；这一条也欢迎用你自己追的书来反驳。</div>
+
+          <p>还有一个反例。《归墟灯录》用的也是浮岛框架，但第 30 章留存只有 33%，原因是前 20 章同时开了四个域的人物线，读者记不住谁是谁。设定不是万能钥匙，人物密度才是第一道门槛。</p>
+        </div>
+      </section>
+
+      <section class="sec" id="guide">
+        <div class="sec-head">
+          <div><span class="kicker">体验指南</span><h2>从试读到追更的四个步骤</h2></div>
+          <span class="meta">适用于新读者与回坑读者</span>
+        </div>
+        <ol class="steps">
+          <li>
+            <h3>先看前五章试读</h3>
+            <p>前五章公开，不用账号。重点看主角的开局处境是否具体：是旁支子弟、渡口帮工，还是被逐出宗门的剑修，写清楚了好判断后面能不能共情。</p>
+          </li>
+          <li>
+            <h3>翻书目页的更新记录</h3>
+            <p>最近一次更新距今多久、单章字数、有无断更标记，三行就能看完。60 天以上没动的书，先放收藏夹，别急着投入。</p>
+          </li>
+          <li>
+            <h3>对照追读榜与长评</h3>
+            <p>追读榜看的是人数，长评看的是具体条目。318 条长评里有 112 条带章节定位，比星级评分更能看出问题在哪一章。</p>
+          </li>
+          <li>
+            <h3>收藏后用书单管理</h3>
+            <p>书单按“连载中 / 等更 / 已完本”分三格，每格不超过 8 本。超过 8 本，更新提醒会互相淹没，反而漏更。</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="sec faq" id="faq">
+        <div class="sec-head">
+          <div><span class="kicker">常见问答</span><h2>读者问得最多的五个问题</h2></div>
+        </div>
+        <details>
+          <summary>异世魔幻和东方玄幻在设定上怎么区分</summary>
+          <p>异世魔幻通常有独立地理与种族体系，比如《裂空纪》的浮岛十二域、契约兽的等级划分；东方玄幻多借用修真、宗门、灵根这类词汇，力量体系围绕境界层级展开。两者在站内分属不同频道，标签不混用。</p>
+        </details>
+        <details>
+          <summary>连载书断更了还能追吗</summary>
+          <p>先看书目页的更新记录。若最近一次更新距今超过 60 天，多数读者会转去同作者的完本作品，等复更通知再回来补。断更三个月以上的书，站内会加灰标，但不删条目。</p>
+        </details>
+        <details>
+          <summary>仙侠修真类新书怎么判断值不值得入坑</summary>
+          <p>看前三十章的境界推进节奏与宗门副本数量。三十章内出现两个以上独立宗门任务线、主角境界有明确跨越的，通常作者手上有完整大纲。只写一处秘境、反复打擂台的，后期容易卡文。</p>
+        </details>
+        <details>
+          <summary>章节试读要不要注册账号</summary>
+          <p>前五章公开试读无需登录，第六十章之后的部分需要书友账号，收藏、书单与书评也依赖账号同步。账号只用于站内记录，不涉及付费章节。</p>
+        </details>
+        <details>
+          <summary>热血升级流的战力数值为什么容易崩</summary>
+          <p>早期用低阶境界做筛选，后期同阶对手密度上升。若作者不设战力上限与代价机制，就会出现越级秒杀。《铁狱十三重》在第 188 章补了一段代价说明，是近期处理得比较清楚的一例。</p>
+        </details>
+      </section>
+
+      <section class="sec" id="reviews">
+        <div class="sec-head">
+          <div><span class="kicker">用户评论</span><h2>书评区最近在聊什么</h2></div>
+          <span class="meta">本周 61 条新长评</span>
+        </div>
+        <div class="comments">
+          <div class="cmt">
+            <div class="cmt-head"><b>渡口老周</b><span>11 月 7 日</span><span>评《墨河渡口》第 40—46 章</span></div>
+            <p>夜渡验灯那条规矩，第 44 章主角拿假灯混过去，代价是被扣了三条船的通行权。这个处罚有记账，前后能对上，行。</p>
+          </div>
+          <div class="cmt neg">
+            <div class="cmt-head"><b>青砖巷口</b><span>11 月 6 日</span><span>评《灵墟禁地》</span></div>
+            <p>前五十章全在讲符纹，看到第五十一章我差点忘了主角姓什么。背景写得细，但人物太薄，弃了。</p>
+          </div>
+          <div class="cmt neu">
+            <div class="cmt-head"><b>半页笔记</b><span>11 月 5 日</span><span>评《雁山渡灵》完本</span></div>
+            <p>218 万字收在渡灵人这条线上，番外补了主角师父的旧案，算是有始有终。谈不上多惊艳，但读着不累。</p>
+          </div>
+          <div class="cmt">
+            <div class="cmt-head"><b>铁狱观众甲</b><span>11 月 4 日</span><span>评《铁狱十三重》第 188 章</span></div>
+            <p>作者终于把越级战胜率 27% 的代价写出来了，打赢要耗一条经脉。早这么写，前面八十章也不至于被骂数值通胀。</p>
+          </div>
+          <div class="cmt neg">
+            <div class="cmt-head"><b>赤霄看剑</b><span>11 月 3 日</span><span>评《赤霄剑宗》剑冢副本</span></div>
+            <p>剑冢连写 43 章，第 39 章那把断剑的来历讲了两遍，重复了。情节可以慢，重复不能忍。</p>
+          </div>
+          <div class="cmt">
+            <div class="cmt-head"><b>浮岛航线员</b><span>11 月 2 日</span><span>评《裂空纪》第三卷</span></div>
+            <p>断链之后只剩三条航线，第三卷前 12 章一直在跑这三条线，地理限制真成了剧情压力，比第二卷散着写好。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec" id="news">
+        <div class="sec-head">
+          <div><span class="kicker">相关资讯</span><h2>开书、完本与规则变动</h2></div>
+        </div>
+        <div class="news-grid">
+          <article class="news-item">
+            <time datetime="2026-11-06">11 月 6 日</time>
+            <h3>《雁山渡灵》番外发布，补完师父旧案</h3>
+            <p>作者半盏灯在完结后连载三篇番外，合计 1.8 万字，交代渡灵人传承的来历。正文 218 万字已全部可读。</p>
+          </article>
+          <article class="news-item">
+            <time datetime="2026-11-04">11 月 4 日</time>
+            <h3>《铁狱十三重》新增战力代价章</h3>
+            <p>第 188 章补入越级取胜的经脉损耗设定，书评区争议随之转向“代价够不够狠”，讨论有了具体落点。</p>
+          </article>
+          <article class="news-item">
+            <time datetime="2026-10-28">10 月 28 日</time>
+            <h3>浮岛航线标签从 61 部增至 77 部</h3>
+            <p>十月新开作品里，带浮岛设定的有 16 部。频道内已单独设标签页，便于按航线数量、域数筛选。</p>
+          </article>
+          <article class="news-item">
+            <time datetime="2026-10-19">10 月 19 日</time>
+            <h3>《墨河渡口》开书，渡口规矩成讨论点</h3>
+            <p>新书首发 12 章把三条渡口规矩写全，首周追读破万。评论区多围绕违规代价是否合理展开。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="sec" id="relate">
+        <div class="sec-head">
+          <div><span class="kicker">相关推荐</span><h2>和当前书目相关的话题标签</h2></div>
+        </div>
+        <div class="rel">
+          <a href="/#deep">浮岛航线设定怎么写</a>
+          <a href="/#deep">异世魔幻前三十章留人</a>
+          <a href="/#picks">宗门争锋完本推荐</a>
+          <a href="/#guide">仙侠修真入坑顺序</a>
+          <a href="/#reviews">热血升级流战力对照</a>
+          <a href="/#picks">契约兽养成书单</a>
+          <a href="/#updates">断更复更提醒</a>
+          <a href="/#rank">追读榜前五十</a>
+        </div>
+      </section>
+
+      <section class="sec" id="rank">
+        <div class="sec-head">
+          <div><span class="kicker">追读榜</span><h2>11 月 8 日追读人数前十</h2></div>
+          <span class="meta">按近 7 日追读均值排序</span>
+        </div>
+        <ol class="rank">
+          <li><a href="/#picks">《裂空纪》</a><span class="score">4.2 万</span></li>
+          <li><a href="/#picks">《赤霄剑宗》</a><span class="score">3.6 万</span></li>
+          <li><a href="/#picks">《铁狱十三重》</a><span class="score">2.9 万</span></li>
+          <li><a href="/#cats">《玄天铸骨》</a><span class="score">2.4 万</span></li>
+          <li><a href="/#picks">《墨河渡口》</a><span class="score">1.1 万</span></li>
+          <li><a href="/#cats">《归墟灯录》</a><span class="score">1.05 万</span></li>
+          <li><a href="/#picks">《灵墟禁地》</a><span class="score">8 500</span></li>
+          <li><a href="/#cats">《九曜契兽录》</a><span class="score">7 900</span></li>
+          <li><a href="/#cats">《长夜守钥人》</a><span class="score">7 200</span></li>
+          <li><a href="/#cats">《双生灵根》</a><span class="score">6 800</span></li>
+        </ol>
+      </section>
+
+    </div>
+
+    <aside class="side-col" aria-label="侧栏导航与辅助信息">
+      <div class="side-card">
+        <h2>栏目导航</h2>
+        <ul class="side-nav" id="sideNav">
+          <li><a href="/#overview">领域概览</a></li>
+          <li><a href="/#picks">精选内容推荐</a></li>
+          <li><a href="/#updates">最新更新</a></li>
+          <li><a href="/#cats">分类入口</a></li>
+          <li><a href="/#deep">深度解析</a></li>
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#faq">常见问答</a></li>
+          <li><a href="/#reviews">用户评论</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#rank">追读榜</a></li>
+        </ul>
+      </div>
+      <div class="side-card">
+        <h2>本周更新最勤</h2>
+        <ul class="side-list">
+          <li><a href="/#picks">《裂空纪》</a><span>7 天 14 章</span></li>
+          <li><a href="/#picks">《铁狱十三重》</a><span>7 天 12 章</span></li>
+          <li><a href="/#picks">《墨河渡口》</a><span>7 天 11 章</span></li>
+          <li><a href="/#cats">《玄天铸骨》</a><span>7 天 9 章</span></li>
+        </ul>
+      </div>
+      <div class="side-card">
+        <h2>热门标签</h2>
+        <div class="rel">
+          <a href="/#cats">宗门争锋</a>
+          <a href="/#cats">浮岛航线</a>
+          <a href="/#cats">契约兽</a>
+          <a href="/#cats">灵根废脉</a>
+          <a href="/#cats">剑冢副本</a>
+          <a href="/#cats">渡灵人</a>
+        </div>
+      </div>
+      <div class="side-card">
+        <h2>说明</h2>
+        <p class="side-note">书目数字为示例数据，更新记录以各书条目页为准。11 月 8 日全站有 37 本作品有更新，清单见“最新更新”栏目。</p>
+      </div>
+    </aside>
+  </div>
+  <p id="search-feedback" role="status" aria-live="polite"></p>
+</main>
+
+<footer class="site">
+  <div class="foot-inner">
+    <div class="foot-top">
+      <div>
+        <div class="foot-brand">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#3a2d55"/>
+            <path d="M14 44 L28 16 L36 30 L44 20 L52 44 Z" fill="#e0a53c"/>
+            <circle cx="45" cy="17" r="5" fill="#c8506b"/>
+          </svg>
+          <span>飞魔幻小说网</span>
+        </div>
+        <p class="foot-pos">把东方玄幻、异世魔幻、仙侠修真、热血升级四类长篇按赛道分开摆好，读者按追读与更新稳定度挑书。</p>
+      </div>
+      <div>
+        <h3>书库频道</h3>
+        <ul>
+          <li><a href="/#cats">东方玄幻</a></li>
+          <li><a href="/#cats">异世魔幻</a></li>
+          <li><a href="/#cats">仙侠修真</a></li>
+          <li><a href="/#cats">热血升级流</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>阅读工具</h3>
+        <ul>
+          <li><a href="/#guide">新书试读</a></li>
+          <li><a href="/#rank">追读榜</a></li>
+          <li><a href="/#updates">更新清单</a></li>
+          <li><a href="/#reviews">书评长评</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>读者互动</h3>
+        <ul>
+          <li><a href="/#faq">常见问答</a></li>
+          <li><a href="/#news">开书与完本动态</a></li>
+          <li><a href="/#relate">话题标签</a></li>
+          <li><a href="/#deep">深度解析</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p class="sample">示例数据说明：追读人数、留存比例、章节数与评分均为演示用示例，非真实统计；作者名与书名属虚构条目，如有雷同纯属巧合。页脚更新时间 2026 年 11 月 8 日，对应“最新更新”清单 37 本与“追读榜”前十项。</p>
+      <p>© 2026 飞魔幻小说网 · 内容示例，禁止商用转载</p>
+    </div>
+  </div>
+</footer>
+
+<button id="toTop" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  var toggle = document.getElementById('navToggle');
+  var topnav = document.getElementById('topnav');
+  if(toggle && topnav){
+    toggle.addEventListener('click', function(){
+      var open = topnav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    topnav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A' && window.innerWidth <= 760){
+        topnav.classList.remove('open');
+        toggle.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  var toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 420){ toTop.classList.add('show'); }
+    else { toTop.classList.remove('show'); }
+  }, {passive:true});
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  var links = Array.prototype.slice.call(document.querySelectorAll('#sideNav a'));
+  var targets = links.map(function(a){
+    var id = a.getAttribute('href').slice(2);
+    return document.getElementById(id);
+  });
+  function highlight(){
+    var pos = window.scrollY + 160;
+    var idx = -1;
+    for(var i=0;i<targets.length;i++){
+      if(targets[i] && targets[i].offsetTop <= pos){ idx = i; }
+    }
+    links.forEach(function(a,i){ a.classList.toggle('active', i === idx); });
+  }
+  window.addEventListener('scroll', highlight, {passive:true});
+  highlight();
+
+  /* 本地书目查找 */
+  var form = document.getElementById('searchForm');
+  var input = document.getElementById('q');
+  var feedback = document.getElementById('search-feedback');
+  var books = [
+    {t:'裂空纪', id:'picks'},
+    {t:'赤霄剑宗', id:'picks'},
+    {t:'雁山渡灵', id:'picks'},
+    {t:'铁狱十三重', id:'picks'},
+    {t:'墨河渡口', id:'picks'},
+    {t:'灵墟禁地', id:'picks'},
+    {t:'玄天铸骨', id:'cats'},
+    {t:'归墟灯录', id:'cats'},
+    {t:'九曜契兽录', id:'cats'},
+    {t:'长夜守钥人', id:'cats'},
+    {t:'双生灵根', id:'cats'}
+  ];
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var q = input.value.trim();
+    if(!q){
+      feedback.style.display = 'block';
+      feedback.textContent = '请输入书名、作者或流派关键词。';
+      return;
+    }
+    var hit = books.filter(function(b){ return b.t.indexOf(q) > -1; });
+    if(hit.length){
+      feedback.style.display = 'block';
+      feedback.style.background = '#e2efe9';
+      feedback.style.borderColor = '#bcd8cc';
+      feedback.style.color = '#2f6b5e';
+      feedback.textContent = '找到 ' + hit.length + ' 本：' + hit.map(function(b){return '《' + b.t + '》';}).join('、') + '，已定位到对应栏目。';
+      var el = document.getElementById(hit[0].id);
+      if(el){ el.scrollIntoView({behavior:'smooth', block:'start'}); }
+    } else {
+      feedback.style.display = 'block';
+      feedback.style.background = '#f7e4e8';
+      feedback.style.borderColor = '#e6c3cb';
+      feedback.style.color = '#b23f5a';
+      feedback.textContent = '没有找到与“' + q + '”匹配的书目。试试书名关键词，或从分类入口按流派浏览。';
+    }
+  });
+})();
+</script>
+</body>
+  </html>
